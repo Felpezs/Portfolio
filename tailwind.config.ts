@@ -40,6 +40,18 @@ const config: Config = {
         50: "#f9f9f9",
       },
     },
+    extend: {
+      fontSize: {
+        base: ["1rem", "120%"],
+        lg: ["1.5rem", "120%"],
+        xl: ["2.250rem", "120%"],
+        "2xl": ["3.375rem", "120%"],
+        "3xl": ["5.062rem", "120%"],
+      },
+      letterSpacing: {
+        tight: "-5%",
+      },
+    },
   },
   plugins: [],
 };

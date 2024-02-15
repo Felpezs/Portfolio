@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-3xl;
+    @apply tracking-tight;
+    font-weight: 700
+  }
+  h2 {
+    @apply text-2xl;
+    @apply tracking-tight;
+  }
+  h3 {
+    @apply text-xl;
+    @apply tracking-tight;
+  }
+}
+
 body {
   box-sizing: border-box;
 }
