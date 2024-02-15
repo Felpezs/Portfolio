@@ -11,6 +11,7 @@ const config: Config = {
       2: "40px",
       3: "60px",
       4: "80px",
+      5: "200px",
     },
     colors: {
       white: "#ffff",
@@ -49,7 +50,7 @@ const config: Config = {
         "3xl": ["5.062rem", "120%"],
       },
       letterSpacing: {
-        tight: "-5%",
+        tight: "-0.05em",
       },
     },
   },
