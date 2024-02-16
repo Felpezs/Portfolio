@@ -7,7 +7,7 @@ import Switch from "./Switch";
 
 const Navbar = () => {
   return (
-    <nav className="dark:text-secondary-50 px-3 py-1 border-b-[3px] border-secondary-900 flex flex-row">
+    <nav className="dark:text-secondary-50 px-3 py-1 border-b-[3px] bg-surface-800 border-secondary-900 flex flex-row fixed top w-full">
       <ul className="flex flex-row gap-1 mr-auto">
         {[
           ["Home", "#"],
