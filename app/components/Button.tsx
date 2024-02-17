@@ -1,4 +1,4 @@
-import React, { Component, HTMLProps, MouseEventHandler } from "react";
+import { Component, HTMLProps, MouseEventHandler } from "react";
 
 type Props = {
   onClick: MouseEventHandler;
