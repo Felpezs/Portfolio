@@ -1,0 +1,31 @@
+{
+  "jobs": [
+    {
+      "index": 1,
+      "fromDate": "06/23",
+      "toDate": "Now",
+      "company": "KnowCode",
+      "description": "KnowCode is a company that helps other companies to deliver software faster, providing remote squads and CTO as a service.",
+      "technologies": [
+        "React",
+        "NextJS",
+        "Javascript",
+        "HTML",
+        "CSS",
+        "SpringBoot",
+        "Java",
+        "Python",
+        "Docker",
+        "MongoDB"
+      ]
+    },
+    {
+      "index": 2,
+      "fromDate": "07/22",
+      "toDate": "06/23",
+      "company": "Funcamp",
+      "description": "Funcamp is a company that acts as an intermediary for contracts for UNICAMP college, managing various projects. Worked as a backend developer on one of the LARCOM projects.",
+      "technologies": ["Javascript", "PHP", "MariaDB", "Python", "Docker"]
+    }
+  ]
+}
