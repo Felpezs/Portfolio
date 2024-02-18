@@ -1,7 +1,7 @@
 {
   "jobs": [
     {
-      "index": 1,
+      "index": 0,
       "fromDate": "06/23",
       "toDate": "Now",
       "company": "KnowCode",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "index": 2,
+      "index": 1,
       "fromDate": "07/22",
       "toDate": "06/23",
       "company": "Funcamp",
