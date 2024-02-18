@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const About = () => {
   return (
-    <section className="col-span-7 flex flex-col gap-2">
+    <>
       <h2 className="text-white">About me</h2>
       <p className="text-neutral-500 text-lg">
         Hello, I&apos;m Felipe Eduardo, a Frontend developer. I hold a
@@ -24,7 +24,7 @@ const About = () => {
       <Button variant="primary" onClick={() => {}} className="ml-auto">
         Check my Projects
       </Button>
-    </section>
+    </>
   );
 };
 

@@ -2,9 +2,7 @@ import Image from "next/image";
 import Navbar from "@/app/components/Navbar/Navbar";
 import ArrowIcon from "@/app/components/icons/ArrowIcon";
 import About from "@/app/components/About";
-import { jobs } from "@/json/jobs.json";
-import JobCard from "@/app/components/JobCard";
-import Chip from "@/app/components/Chip";
+import Experiences from "./components/Experiences";
 
 export default function Home() {
   return (
@@ -32,22 +30,11 @@ export default function Home() {
             className="m-auto"
           />
         </section>
-        <About />
+        <section className="col-span-7 flex flex-col gap-2">
+          <About />
+        </section>
         <section className="col-span-full">
-          <h2 className="text-white text-center mb-2">Experiences</h2>
-          {jobs.map((job) => (
-            <JobCard
-              key={job.index}
-              company={job.company}
-              description={job.description}
-              fromDate={job.fromDate}
-              toDate={job.toDate}
-            >
-              {job.technologies.map((technology, index) => (
-                <Chip key={index}>{technology}</Chip>
-              ))}
-            </JobCard>
-          ))}
+          <Experiences />
         </section>
       </div>
     </main>
