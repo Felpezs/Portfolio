@@ -1,8 +1,9 @@
 "use client";
-import { jobs } from "@/json/jobs.json";
+import data from "@/json/jobs.json";
 import JobCard, { JobCardRef } from "@/app/components/JobCard";
 import Chip from "@/app/components/Chip";
 import { useEffect, useRef, useState } from "react";
+import Carousel from "@/app/components/Carousel/Carousel";
 
 const Experiences = () => {
   const jobCardRefs = useRef<(JobCardRef | null)[]>([]);
@@ -24,23 +25,30 @@ const Experiences = () => {
   return (
     <>
       <h2 className="text-white text-center mb-2">Experiences</h2>
-      {jobs.map((job, i) => {
-        return (
-          <JobCard
-            key={job.index}
-            company={job.company}
-            description={job.description}
-            fromDate={job.fromDate}
-            toDate={job.toDate}
-            ref={(el) => (jobCardRefs.current[i] = el)}
-            onClick={() => onCardClick(job.index)}
-          >
-            {job.technologies.map((technology, index) => (
-              <Chip key={index}>{technology}</Chip>
-            ))}
-          </JobCard>
-        );
-      })}
+      <div className="flex gap-1">
+        <div className="flex flex-col w-6/12 min-h-[230px]">
+          {data.jobs.map((job, i) => {
+            return (
+              <JobCard
+                key={job.index}
+                company={job.company}
+                description={job.description}
+                fromDate={job.fromDate}
+                toDate={job.toDate}
+                ref={(el) => (jobCardRefs.current[i] = el)}
+                onClick={() => onCardClick(job.index)}
+              >
+                {job.technologies.map((technology, index) => (
+                  <Chip key={index}>{technology}</Chip>
+                ))}
+              </JobCard>
+            );
+          })}
+        </div>
+        <div className="w-6/12">
+          <Carousel projects={data.jobs[activeCardIndex].projects} />
+        </div>
+      </div>
     </>
   );
 };

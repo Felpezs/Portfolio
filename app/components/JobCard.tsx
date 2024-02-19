@@ -46,7 +46,7 @@ const JobCard = forwardRef<JobCardRef | null, JobCardProps>(function JobCard(
   );
 
   return (
-    <div className="flex gap-1 w-6/12 min-h-[230px]">
+    <div className="flex gap-1">
       <p className="text-base text-neutral-600 min-w-[120px] text-right">
         {fromDate}-{toDate}
       </p>

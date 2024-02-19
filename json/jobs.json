@@ -17,6 +17,13 @@
         "Python",
         "Docker",
         "MongoDB"
+      ],
+      "projects": [
+        {
+          "index": 0,
+          "description": "ggg",
+          "imageSrc": "https://images.unsplash.com/photo-1707343848723-bd87dea7b118?q=80&w=419&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
       ]
     },
     {
@@ -25,7 +32,14 @@
       "toDate": "06/23",
       "company": "Funcamp",
       "description": "Funcamp is a company that acts as an intermediary for contracts for UNICAMP college, managing various projects. Worked as a backend developer on one of the LARCOM projects.",
-      "technologies": ["Javascript", "PHP", "MariaDB", "Python", "Docker"]
+      "technologies": ["Javascript", "PHP", "MariaDB", "Python", "Docker"],
+      "projects": [
+        {
+          "index": 0,
+          "description": "ab",
+          "imageSrc": ""
+        }
+      ]
     }
   ]
 }
