@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-type CarouselItemProps = {
+export type CarouselItemProps = {
   imgSrc: string;
 };
 

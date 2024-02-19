@@ -4,6 +4,7 @@ import JobCard, { JobCardRef } from "@/app/components/JobCard";
 import Chip from "@/app/components/Chip";
 import { useEffect, useRef, useState } from "react";
 import Carousel from "@/app/components/Carousel/Carousel";
+import CarouselItem from "./Carousel/CarouselItem";
 
 const Experiences = () => {
   const jobCardRefs = useRef<(JobCardRef | null)[]>([]);
@@ -46,7 +47,11 @@ const Experiences = () => {
           })}
         </div>
         <div className="w-6/12">
-          <Carousel projects={data.jobs[activeCardIndex].projects} />
+          <Carousel>
+            <CarouselItem imgSrc={data.jobs[0].projects[0].imageSrc} />
+            <CarouselItem imgSrc={data.jobs[0].projects[0].imageSrc} />
+            <CarouselItem imgSrc={data.jobs[0].projects[0].imageSrc} />
+          </Carousel>
         </div>
       </div>
     </>

@@ -1,34 +1,38 @@
-import { useState } from "react";
-import CarouselItem from "./CarouselItem";
-
-type Project = {
-  index: number;
-  description: string;
-  imageSrc: string;
-};
+import React, { Children, useCallback, useEffect, useState } from "react";
+import CarouselItem, { CarouselItemProps } from "./CarouselItem";
 
 type CarouselProps = {
-  projects: Project[];
+  children:
+    | React.ReactElement<CarouselItemProps>
+    | [
+        React.ReactElement<CarouselItemProps>,
+        React.ReactElement<CarouselItemProps>,
+      ]
+    | [
+        React.ReactElement<CarouselItemProps>,
+        React.ReactElement<CarouselItemProps>,
+        React.ReactElement<CarouselItemProps>
+      ];
 };
 
-const Carousel = ({ projects }: CarouselProps) => {
+const Carousel = ({ children }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [prevIndex, setPrevIndex] = useState<number>(0);
+  const [nextIndex, setNextIndex] = useState<number>(0);
 
-  const getCarouselElements = () => {
-    const lenght = projects.length;
-    const prevIndex = (currentIndex - 1 + lenght) % lenght;
-    const nextIndex = (currentIndex + 1 + lenght) % lenght;
+  const getCarouselElements = useCallback(() => {
+    const length = Children.count(children);
+    const prevIndex = (currentIndex - 1 + length) % length;
+    const nextIndex = (currentIndex + 1 + length) % length;
+    setPrevIndex(prevIndex);
+    setNextIndex(nextIndex);
+  }, [currentIndex, children]);
 
-    return { prevIndex, nextIndex };
-  };
+  useEffect(() => {
+    getCarouselElements();
+  }, [getCarouselElements]);
 
-  return (
-    <>
-      {projects.map((project) => (
-        <CarouselItem key={project.index} imgSrc={project.imageSrc} />
-      ))}
-    </>
-  );
+  return <>{Children.toArray(children)[1]}</>;
 };
 
 export default Carousel;
