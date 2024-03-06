@@ -3,6 +3,7 @@ import React from "react";
 
 export type CarouselItemProps = {
   imgSrc: string;
+  description: string;
   className?: React.HTMLAttributes<HTMLDivElement>["className"];
 };
 
