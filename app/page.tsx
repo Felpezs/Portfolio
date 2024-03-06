@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Navbar from "@/app/components/Navbar/Navbar";
-import ArrowIcon from "@/app/components/icons/ArrowIcon";
+import ArrowCircle from "@/app/components/icons/ArrowCircle";
 import About from "@/app/components/About";
 import Experiences from "./components/Experiences";
 
@@ -18,7 +18,7 @@ export default function Home() {
             providing great experiences for the users.
           </h3>
           <div className="flex justify-center py-1">
-            <ArrowIcon />
+            <ArrowCircle />
           </div>
         </section>
         <section className="col-span-5 justify-center">
