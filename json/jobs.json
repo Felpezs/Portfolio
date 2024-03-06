@@ -21,17 +21,17 @@
       "projects": [
         {
           "index": 0,
-          "description": "ggg",
+          "description": "project 0",
           "imageSrc": "https://images.unsplash.com/photo-1707343848723-bd87dea7b118?q=80&w=419&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "index": 1,
-          "description": "ggg",
+          "description": "project 1",
           "imageSrc": "https://images.unsplash.com/photo-1682687982468-4584ff11f88a?q=80&w=419&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "index": 2,
-          "description": "ggg",
+          "description": "project 2",
           "imageSrc": "https://images.unsplash.com/photo-1707655096635-89387f83f189?q=80&w=419&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
