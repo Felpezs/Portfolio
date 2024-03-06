@@ -1,6 +1,6 @@
 import React from "react";
 
-const ArrowIcon = () => {
+const ArrowCircle = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +17,4 @@ const ArrowIcon = () => {
   );
 };
 
-export default ArrowIcon;
+export default ArrowCircle;
