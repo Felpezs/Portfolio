@@ -1,4 +1,4 @@
-import React, { Children, ReactElement, useEffect, useState } from "react";
+import React, { Children, useState } from "react";
 import { CarouselItemProps } from "./CarouselItem";
 import Arrow from "../icons/Arrow";
 import DotIndicator from "../icons/DotIndicator";
@@ -19,16 +19,12 @@ const Carousel = ({ children, className }: CarouselProps) => {
     middleOfCarouselItems
   );
 
-  useEffect(() => {
-    console.log("Current index:" + currentIndex);
-  }, [currentIndex]);
-
   const prevIndex =
     (currentIndex - 1 + carouselItems.length) % carouselItems.length;
   const nextIndex = (currentIndex + 1) % carouselItems.length;
 
   const getCarouselItemsToShow = () => {
-    if (carouselItems.length <= 3) return carouselItems;
+    if (carouselItems.length < 3) return carouselItems;
 
     const indexes = [prevIndex, currentIndex, nextIndex];
 
@@ -36,11 +32,14 @@ const Carousel = ({ children, className }: CarouselProps) => {
   };
 
   const handleClickPrev = () => {
-    setCurrentIndex((prevState) => prevState - 1);
+    setCurrentIndex(
+      (prevState) =>
+        (prevState - 1 + carouselItems.length) % carouselItems.length
+    );
   };
 
   const handleClickNext = () => {
-    setCurrentIndex((prevState) => prevState + 1);
+    setCurrentIndex((prevState) => (prevState + 1) % carouselItems.length);
   };
 
   return (
@@ -66,7 +65,7 @@ const Carousel = ({ children, className }: CarouselProps) => {
         {carouselItems.map((carouselItem, index) => (
           <DotIndicator
             key={(carouselItem as React.ReactElement<CarouselItemProps>).key}
-            isActive={index === 0}
+            isActive={index === currentIndex}
           />
         ))}
         <Arrow rotate onClick={handleClickNext} />
