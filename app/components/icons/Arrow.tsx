@@ -14,9 +14,7 @@ const Arrow = ({ rotate, onClick }: ArrowProps) => {
         height="18"
         fill="none"
         viewBox="0 0 20 18"
-        className={
-          rotate ? "transform rotate-180 border border-secondary-300" : ""
-        }
+        className={rotate ? "transform rotate-180" : ""}
       >
         <path
           fill="#B4B4B4"
