@@ -15,6 +15,7 @@ const CarouselItem = ({ imgSrc, className }: CarouselItemProps) => {
       width={419}
       height={275}
       className={"rounded-[40px] " + className}
+      id="slide"
     />
   );
 };

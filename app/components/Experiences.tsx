@@ -46,20 +46,7 @@ const Experiences = () => {
             );
           })}
         </div>
-        <Carousel className="w-6/12">
-          <CarouselItem
-            imgSrc={data.jobs[0].projects[0].imageSrc}
-            description={data.jobs[0].projects[0].description}
-          />
-          <CarouselItem
-            imgSrc={data.jobs[0].projects[1].imageSrc}
-            description={data.jobs[0].projects[1].description}
-          />
-          <CarouselItem
-            imgSrc={data.jobs[0].projects[2].imageSrc}
-            description={data.jobs[0].projects[2].description}
-          />
-        </Carousel>
+        <Carousel className="w-6/12" carouselItems={data.jobs[0].projects} />
       </div>
     </>
   );

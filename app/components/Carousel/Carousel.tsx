@@ -1,62 +1,64 @@
-import React, { Children, useState } from "react";
-import { CarouselItemProps } from "./CarouselItem";
+import React, { useState } from "react";
 import Arrow from "../icons/Arrow";
 import DotIndicator from "../icons/DotIndicator";
+import CarouselItem from "./CarouselItem";
 
-type CarouselProps = {
-  children:
-    | React.ReactElement<CarouselItemProps>
-    | React.ReactElement<CarouselItemProps>[];
-  className?: React.HTMLAttributes<HTMLDivElement>["className"];
+export type CarouselItemProps = {
+  imageSrc: string;
+  description: string;
+  index: number;
 };
 
-const Carousel = ({ children, className }: CarouselProps) => {
-  const carouselItems = Children.toArray(children);
+type CarouselProps = {
+  className?: React.HTMLAttributes<HTMLDivElement>["className"];
+  carouselItems: CarouselItemProps[];
+};
 
-  const middleOfCarouselItems = Math.floor(carouselItems.length / 2);
+const Carousel = ({ carouselItems, className }: CarouselProps) => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const [currentIndex, setCurrentIndex] = useState<number>(
-    middleOfCarouselItems
-  );
-
-  const prevIndex =
+  const getPrevIndex = (currentIndex: number) =>
     (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-  const nextIndex = (currentIndex + 1) % carouselItems.length;
+
+  const getNextIndex = (currentIndex: number) =>
+    (currentIndex + 1) % carouselItems.length;
 
   const getCarouselItemsToShow = () => {
     if (carouselItems.length < 3) return carouselItems;
 
-    const indexes = [prevIndex, currentIndex, nextIndex];
+    const prevIndex = getPrevIndex(currentIndex);
+    const nextIndex = getNextIndex(currentIndex);
+
+    const indexes = [prevIndex, currentIndex, nextIndex].sort();
 
     return indexes.map((index) => carouselItems[index]);
   };
 
-  const handleClickPrev = () => {
-    setCurrentIndex(
-      (prevState) =>
-        (prevState - 1 + carouselItems.length) % carouselItems.length
-    );
-  };
+  const handleClickPrev = () =>
+    setCurrentIndex((prevState) => getPrevIndex(prevState));
 
-  const handleClickNext = () => {
-    setCurrentIndex((prevState) => (prevState + 1) % carouselItems.length);
-  };
+  const handleClickNext = () =>
+    setCurrentIndex((prevState) => getNextIndex(prevState));
 
   return (
     <div className={className}>
-      <div className="flex justify-center items-center transition transform duration-[5s] h-[279px] flex-shrink-0 mb-[20px]">
+      <div className="relative flex align-items h-[279px] mb-[20px] *:absolute *:top-[50%] *:transition-all *:-translate-y-1/2  *:-translate-x-1/2 *:duration-1000 ">
         {getCarouselItemsToShow().map((item, index) => {
-          return React.cloneElement(
-            item as React.ReactElement<CarouselItemProps>,
-            {
-              className:
-                "first:w-[297px] last:w-[297px] " +
-                `${
-                  index === 1
-                    ? "absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
-                    : ""
-                }`,
-            }
+          let className = "left-[30%] z-0 w-[297px] opacity-80";
+
+          if (index === currentIndex)
+            className = "left-[50%] z-10 opacity-100 w-[419px]";
+
+          if (index === getNextIndex(currentIndex))
+            className = "left-[70%] z-0 w-[297px] opacity-80";
+
+          return (
+            <CarouselItem
+              key={item.index}
+              description={item.description}
+              imgSrc={item.imageSrc}
+              className={className}
+            />
           );
         })}
       </div>
@@ -64,17 +66,14 @@ const Carousel = ({ children, className }: CarouselProps) => {
         <Arrow onClick={handleClickPrev} />
         {carouselItems.map((carouselItem, index) => (
           <DotIndicator
-            key={(carouselItem as React.ReactElement<CarouselItemProps>).key}
+            key={carouselItem.index}
             isActive={index === currentIndex}
           />
         ))}
         <Arrow rotate onClick={handleClickNext} />
       </div>
       <p className="text-neutral-500 mt-1">
-        {
-          (carouselItems[currentIndex] as React.ReactElement<CarouselItemProps>)
-            .props.description
-        }
+        {carouselItems[currentIndex].description}
       </p>
     </div>
   );
