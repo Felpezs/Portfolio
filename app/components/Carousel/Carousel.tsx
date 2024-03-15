@@ -47,7 +47,8 @@ const Carousel = ({ carouselItems, className }: CarouselProps) => {
           let className = "left-[30%] z-0 w-[297px] opacity-80";
 
           if (index === currentIndex)
-            className = "left-[50%] z-10 opacity-100 w-[419px]";
+            className =
+              "left-[50%] z-10 opacity-100 w-[419px] shadow-lg shadow-surface-400";
 
           if (index === getNextIndex(currentIndex))
             className = "left-[70%] z-0 w-[297px] opacity-80";
