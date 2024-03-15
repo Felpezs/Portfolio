@@ -13,8 +13,7 @@ const Button = ({ onClick, icon, children, variant, className }: Props) => {
     <button
       onClick={onClick}
       className={
-        "rounded-full text-white h-[60px] px-2 py-[10px] text-base w-fit" +
-        " " +
+        "rounded-full text-white h-[60px] px-2 py-[10px] text-base w-fit transition-colors " +
         (variant === "primary"
           ? "bg-primary-700 hover:bg-primary-500"
           : "bg-secondary-500 hover:bg-secondary-300") +
