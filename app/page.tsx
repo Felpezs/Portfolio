@@ -3,6 +3,7 @@ import Navbar from "@/app/components/Navbar/Navbar";
 import ArrowCircle from "@/app/components/icons/ArrowCircle";
 import About from "@/app/components/About";
 import Experiences from "./components/Experiences";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
@@ -35,6 +36,9 @@ export default function Home() {
         </section>
         <section className="col-span-full">
           <Experiences />
+        </section>
+        <section className="col-span-full *:mb-2">
+          <Projects />
         </section>
       </div>
     </main>
