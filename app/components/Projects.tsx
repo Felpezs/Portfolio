@@ -17,6 +17,7 @@ const Projects = () => {
           projectTitle="Vampetaço"
           imageAlt=""
           description="lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet "
+          projectUrl=""
         >
           <Chip>My chip</Chip>
         </ProjectCard>
@@ -25,6 +26,7 @@ const Projects = () => {
           projectTitle="Vampetaço"
           imageAlt=""
           description=""
+          projectUrl=""
         >
           <Chip>My chip</Chip>
         </ProjectCard>
@@ -33,6 +35,7 @@ const Projects = () => {
           projectTitle="Vampetaço"
           imageAlt=""
           description=""
+          projectUrl=""
         >
           <Chip>My chip</Chip>
         </ProjectCard>
