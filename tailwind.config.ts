@@ -17,6 +17,7 @@ const config: Config = {
       white: "#ffff",
       surface: {
         800: "#070e18",
+        700: "#09121F",
         600: "#0c1727",
         500: "#0d192b",
         400: "#3d4755",

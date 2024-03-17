@@ -4,6 +4,7 @@ import ArrowCircle from "@/app/components/icons/ArrowCircle";
 import About from "@/app/components/About";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -39,6 +40,9 @@ export default function Home() {
         </section>
         <section className="col-span-full *:mb-2">
           <Projects />
+        </section>
+        <section className="col-span-full">
+          <Contact />
         </section>
       </div>
     </main>
