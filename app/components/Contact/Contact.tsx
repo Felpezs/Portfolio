@@ -2,6 +2,7 @@
 import { FormEvent } from "react";
 import Button from "../Button";
 import Arrow from "../icons/Arrow";
+import Avatar from "./Avatar";
 
 const Contact = () => {
   const handleSubmit = (e: FormEvent) => {
@@ -10,7 +11,9 @@ const Contact = () => {
 
   return (
     <div className="bg-surface-700 min-h-[410px] rounded-[20px] flex justify-between px-3 py-1">
-      <div className="w-[592px] bg-secondary-200">a</div>
+      <div className="w-[592px] flex flex-col gap-2">
+        <Avatar />
+      </div>
       <form
         onSubmit={(e) => handleSubmit(e)}
         className="flex flex-col flex-grow ml-[140px] gap-[16px]"
