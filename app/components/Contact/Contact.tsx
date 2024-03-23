@@ -3,6 +3,8 @@ import { FormEvent } from "react";
 import Button from "../Button";
 import Arrow from "../icons/Arrow";
 import Avatar from "./Avatar";
+import Linkedin from "../icons/Linkedin";
+import Github from "../icons/GIthub";
 
 const Contact = () => {
   const handleSubmit = (e: FormEvent) => {
@@ -13,6 +15,29 @@ const Contact = () => {
     <div className="bg-surface-700 min-h-[410px] rounded-[20px] flex justify-between px-3 py-1">
       <div className="w-[592px] flex flex-col gap-2">
         <Avatar />
+        <div>
+          <p className="text-white text-lg mb-1 tracking-wider">
+            Interested in working with me ?
+          </p>
+          <p className="text-neutral-500 text-base mb-1">
+            I’m always looking forward for new opportunities. Send an email to
+            felipeedfreire@gmail.com or reach me out in a social media.
+          </p>
+          <div className="flex gap-[8px]">
+            <span
+              className="w-[48px] h-[48px] p-[12px] bg-surface-500 rounded-[8px] cursor-pointer"
+              onClick={() => {}}
+            >
+              <Linkedin />
+            </span>
+            <span
+              className="w-[48px] h-[48px] p-[12px] bg-surface-500 rounded-[8px] cursor-pointer"
+              onClick={() => {}}
+            >
+              <Github />
+            </span>
+          </div>
+        </div>
       </div>
       <form
         onSubmit={(e) => handleSubmit(e)}
@@ -28,7 +53,7 @@ const Contact = () => {
           className="bg-surface-500 text-white rounded-[16px] transition-all  px-[16px] py-[12px] border-2  border-surface-400 placeholder:text-white focus:border-secondary-600 outline-none"
           type="email"
           required
-          placeholder="Email"
+          placeholder="E-mail"
         />
         <textarea
           className="bg-surface-500 text-white rounded-[16px] transition-all  px-[16px] py-[12px] border-2  border-surface-400 placeholder:text-white focus:border-secondary-600 outline-none flex-grow"
