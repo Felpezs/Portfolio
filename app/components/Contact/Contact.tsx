@@ -24,18 +24,22 @@ const Contact = () => {
             felipeedfreire@gmail.com or reach me out in a social media.
           </p>
           <div className="flex gap-[8px]">
-            <span
+            <a
               className="w-[48px] h-[48px] p-[12px] bg-surface-500 rounded-[8px] cursor-pointer"
-              onClick={() => {}}
+              href="https://www.linkedin.com/in/felipeed/"
+              target="_blank"
+              referrerPolicy="no-referrer"
             >
               <Linkedin />
-            </span>
-            <span
+            </a>
+            <a
+              href="https://github.com/Felpezs"
+              target="_blank"
+              referrerPolicy="no-referrer"
               className="w-[48px] h-[48px] p-[12px] bg-surface-500 rounded-[8px] cursor-pointer"
-              onClick={() => {}}
             >
               <Github />
-            </span>
+            </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,3 @@
-import React from "react";
-
 type ArrowCircleProps = {
   rotate?: boolean;
   width?: number;
