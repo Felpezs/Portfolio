@@ -1,13 +1,20 @@
 import React from "react";
 
-const ArrowCircle = () => {
+type ArrowCircleProps = {
+  rotate?: boolean;
+  width?: number;
+  height?: number;
+};
+
+const ArrowCircle = ({ width, height, rotate }: ArrowCircleProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="36"
-      height="37"
+      width={width || "36"}
+      height={height || "37"}
       fill="none"
       viewBox="0 0 36 37"
+      className={rotate ? "transform rotate-180" : ""}
     >
       <path
         fill="#ffff"

@@ -5,10 +5,11 @@ import About from "@/app/components/About";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main id="main">
       <Navbar />
       <div className="grid grid-cols-12 auto-cols-max gap-x-1 gap-y-5 mx-3">
         <section className="col-span-full gap-y-1 mt-5 px-[16.89%]">
@@ -45,6 +46,7 @@ export default function Home() {
           <Contact />
         </section>
       </div>
+      <Footer />
     </main>
   );
 }
