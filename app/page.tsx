@@ -9,10 +9,10 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main id="main">
+    <main>
       <Navbar />
       <div className="grid grid-cols-12 auto-cols-max gap-x-1 gap-y-5 mx-3">
-        <section className="col-span-full gap-y-1 mt-5 px-[16.89%]">
+        <section id="home" className="col-span-full gap-y-1 mt-5 px-[16.89%]">
           <h3 className="text-neutral-600 mb-1">Hello, I am</h3>
           <h1 className="text-white mb-1">Felipe Eduardo</h1>
           <h1 className="text-white mb-1">I&apos;m a software developer</h1>
@@ -21,7 +21,9 @@ export default function Home() {
             providing great experiences for the users.
           </h3>
           <div className="flex justify-center py-1">
-            <ArrowCircle />
+            <a href="#about">
+              <ArrowCircle />
+            </a>
           </div>
         </section>
         <section className="col-span-5 justify-center">
@@ -33,16 +35,16 @@ export default function Home() {
             className="m-auto"
           />
         </section>
-        <section className="col-span-7 flex flex-col gap-2">
+        <section id="about" className="col-span-7 flex flex-col gap-2">
           <About />
         </section>
-        <section className="col-span-full">
+        <section id="experience" className="col-span-full">
           <Experiences />
         </section>
-        <section className="col-span-full *:mb-2">
+        <section id="projects" className="col-span-full">
           <Projects />
         </section>
-        <section className="col-span-full">
+        <section id="contact" className="col-span-full">
           <Contact />
         </section>
       </div>

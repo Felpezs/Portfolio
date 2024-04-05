@@ -10,11 +10,11 @@ const Navbar = () => {
     <nav className="dark:text-secondary-50 px-3 py-1 border-b-[3px] bg-surface-800 border-secondary-900 flex flex-row fixed top w-full z-30">
       <ul className="flex flex-row gap-1 mr-auto">
         {[
-          ["Home", "#"],
-          ["About", "#"],
-          ["Experience", "#"],
-          ["Projects", "#"],
-          ["Contact", "#"],
+          ["Home", "#home"],
+          ["About", "#about"],
+          ["Experience", "#experience"],
+          ["Projects", "#projects"],
+          ["Contact", "#contact"],
         ].map(([title, url], index) => {
           return (
             <li key={index}>

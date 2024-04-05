@@ -7,11 +7,11 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   return (
     <>
-      <h2 className="text-white text-center">Projects</h2>
-      <p className="text-neutral-500 text-lg text-center">
+      <h2 className="text-white text-center mb-2">Projects</h2>
+      <p className="text-neutral-500 text-lg text-center mb-2">
         What I&apos;ve been building
       </p>
-      <div className="flex items-stretch gap-1 justify-center">
+      <div className="flex items-stretch gap-1 justify-center mb-2">
         <ProjectCard
           imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIFvpWuFeaq8my6px7_2YpoelERwQt5YyrFpAOTdRyQ&s"
           projectTitle="Vampetaço"
@@ -40,13 +40,14 @@ const Projects = () => {
           <Chip>My chip</Chip>
         </ProjectCard>
       </div>
-      <Button
-        onClick={() => {}}
-        variant="primary"
-        className="my-[0px] mx-auto block"
+      <a
+        href="https://github.com/Felpezs"
+        target="_blank"
+        referrerPolicy="no-referrer"
+        className="block w-fit mx-auto"
       >
-        See All
-      </Button>
+        <Button variant="primary">See All</Button>
+      </a>
     </>
   );
 };

@@ -26,7 +26,7 @@ const Footer = () => {
         >
           Linkedin
         </a>
-        <a href="#main">
+        <a href="#home">
           <ArrowCircle rotate height={24} width={24} />
         </a>
       </div>

@@ -1,7 +1,7 @@
 import { HTMLProps, MouseEventHandler, ReactElement } from "react";
 
 type Props = {
-  onClick: MouseEventHandler;
+  onClick?: MouseEventHandler;
   icon?: ReactElement;
   children: string;
   variant: "primary" | "secondary";
@@ -18,7 +18,7 @@ const Button = ({ onClick, icon, children, variant, className }: Props) => {
           ? "bg-primary-700 hover:bg-primary-500"
           : "bg-secondary-500 hover:bg-secondary-300") +
         " " +
-        className
+        (className ? className : "")
       }
     >
       {children}

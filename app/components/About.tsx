@@ -21,8 +21,14 @@ const About = () => {
         What truly motivates me is the realization that my expertise is making a
         positive impact on others&apos; lives!
       </p>
-      <Button variant="primary" onClick={() => {}} className="ml-auto">
-        Check my Projects
+      <Button
+        variant="primary"
+        onClick={() => {
+          window.location.href = "#experience";
+        }}
+        className="ml-auto"
+      >
+        Check My Experiences
       </Button>
     </>
   );
