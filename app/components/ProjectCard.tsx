@@ -11,8 +11,8 @@ type ProjectCardProps = {
   children: React.ReactElement<ChipProps> | React.ReactElement<ChipProps>[];
 };
 
-const navigate = () => {
-  //Navigate to url
+const navigate = (url: string) => {
+  window.open(url);
 };
 
 const ProjectCard = ({
@@ -26,7 +26,7 @@ const ProjectCard = ({
   return (
     <div
       className="bg-surface-600 min-h-[450px] w-[427px] p-1 rounded-[20px] transition-all ease-in-out hover:scale-105 cursor-pointer"
-      onClick={() => navigate()}
+      onClick={() => navigate(projectUrl)}
     >
       <Image
         alt={imageAlt}

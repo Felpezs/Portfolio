@@ -3,6 +3,7 @@
 import Button from "./Button";
 import Chip from "./Chip";
 import ProjectCard from "./ProjectCard";
+import data from "@/json/projects.json";
 
 const Projects = () => {
   return (
@@ -12,33 +13,20 @@ const Projects = () => {
         What I&apos;ve been building
       </p>
       <div className="flex items-stretch gap-1 justify-center mb-2">
-        <ProjectCard
-          imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIFvpWuFeaq8my6px7_2YpoelERwQt5YyrFpAOTdRyQ&s"
-          projectTitle="Vampetaço"
-          imageAlt=""
-          description="lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet "
-          projectUrl=""
-        >
-          <Chip>My chip</Chip>
-        </ProjectCard>
-        <ProjectCard
-          imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIFvpWuFeaq8my6px7_2YpoelERwQt5YyrFpAOTdRyQ&s"
-          projectTitle="Vampetaço"
-          imageAlt=""
-          description=""
-          projectUrl=""
-        >
-          <Chip>My chip</Chip>
-        </ProjectCard>
-        <ProjectCard
-          imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIFvpWuFeaq8my6px7_2YpoelERwQt5YyrFpAOTdRyQ&s"
-          projectTitle="Vampetaço"
-          imageAlt=""
-          description=""
-          projectUrl=""
-        >
-          <Chip>My chip</Chip>
-        </ProjectCard>
+        {data.projects.map((project, index) => (
+          <ProjectCard
+            key={project.index}
+            imageSrc={project.imageSrc}
+            imageAlt={project.imageAlt}
+            description={project.description}
+            projectTitle={project.title}
+            projectUrl={project.url}
+          >
+            {project.technologies.map((stack, index) => (
+              <Chip key={stack.index}>{stack.name}</Chip>
+            ))}
+          </ProjectCard>
+        ))}
       </div>
       <a
         href="https://github.com/Felpezs"

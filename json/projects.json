@@ -1,0 +1,45 @@
+{
+  "projects": [
+    {
+      "index": 0,
+      "imageSrc": "/reactgram.png",
+      "imageAlt": "Photo of reactgram project",
+      "description": "This project aims to create a clone of instagram, containing posts, comments and basic login stuff",
+      "url": "https://github.com/Felpezs/reactgram",
+      "title": "Reactgram",
+      "technologies": [
+        { "index": 0, "name": "HTML" },
+        { "index": 1, "name": "CSS" },
+        { "index": 2, "name": "React" },
+        { "index": 3, "name": "NodeJS" },
+        { "index": 4, "name": "Express" },
+        { "index": 5, "name": "MongoDB" }
+      ]
+    },
+    {
+      "index": 1,
+      "imageSrc": "/angularBlog.png",
+      "imageAlt": "E-sports blog",
+      "description": "This project aims to create a blog for sharing e-sports content",
+      "url": "https://blog-angular-ten.vercel.app",
+      "title": "E-sports blog",
+      "technologies": [
+        { "index": 0, "name": "HTML" },
+        { "index": 1, "name": "CSS" },
+        { "index": 2, "name": "Angular" }
+      ]
+    },
+    {
+      "index": 2,
+      "imageSrc": "/spotifyClone.png",
+      "imageAlt": "Photo of spotify landing page",
+      "description": "This project aims to create a clone of spotify landing page, with a responsive design",
+      "url": "https://spotify-clone-brown-three.vercel.app",
+      "title": "Spotify Clone",
+      "technologies": [
+        { "index": 0, "name": "HTML" },
+        { "index": 1, "name": "CSS" }
+      ]
+    }
+  ]
+}
