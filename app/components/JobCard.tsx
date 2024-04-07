@@ -28,13 +28,6 @@ const JobCard = forwardRef<JobCardRef | null, JobCardProps>(function JobCard(
 ) {
   const [isActive, setIsActive] = useState<boolean>(false);
 
-  const deactivatedHr = (
-    <hr className="h-full border-none w-[2px] text-neutral-700 bg-neutral-700 mx-auto" />
-  );
-  const activatedHr = (
-    <hr className="h-full border-none w-[4px] text-white bg-white" />
-  );
-
   useImperativeHandle(
     ref,
     () => {
@@ -51,7 +44,13 @@ const JobCard = forwardRef<JobCardRef | null, JobCardProps>(function JobCard(
         {fromDate}-{toDate}
       </p>
       <div className="h-auto min-w-[4px]">
-        {isActive ? activatedHr : deactivatedHr}
+        <hr
+          className={`h-full border-none transition ${
+            isActive
+              ? "w-[4px] text-white bg-white"
+              : "w-[2px] text-neutral-700 bg-neutral-700 mx-auto"
+          }`}
+        />
       </div>
       <div onClick={onClick} className="cursor-pointer">
         <h3 className="text-white mb-1">{company}</h3>

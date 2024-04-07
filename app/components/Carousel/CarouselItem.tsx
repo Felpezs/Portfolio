@@ -12,10 +12,9 @@ const CarouselItem = ({ imgSrc, className }: CarouselItemProps) => {
     <Image
       src={imgSrc}
       alt=""
-      width={419}
-      height={275}
-      className={"rounded-[40px] " + className}
-      id="slide"
+      width={479}
+      height={269}
+      className={"rounded-[40px] object-fill " + className}
     />
   );
 };

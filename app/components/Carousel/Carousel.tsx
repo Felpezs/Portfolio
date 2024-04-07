@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Arrow from "../icons/Arrow";
 import DotIndicator from "../icons/DotIndicator";
 import CarouselItem from "./CarouselItem";
@@ -16,6 +16,10 @@ type CarouselProps = {
 
 const Carousel = ({ carouselItems, className }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [carouselItems]);
 
   const getPrevIndex = (currentIndex: number) =>
     (currentIndex - 1 + carouselItems.length) % carouselItems.length;
@@ -44,14 +48,13 @@ const Carousel = ({ carouselItems, className }: CarouselProps) => {
     <div className={className}>
       <div className="relative flex align-items h-[279px] mb-[20px] *:absolute *:top-[50%] *:transition-all *:-translate-y-1/2  *:-translate-x-1/2 *:duration-1000 ">
         {getCarouselItemsToShow().map((item, index) => {
-          let className = "left-[30%] z-0 w-[297px] opacity-80";
+          let className = "left-[30%] z-0 w-[297px] h-[167px] opacity-80";
 
           if (index === currentIndex)
             className =
-              "left-[50%] z-10 opacity-100 w-[419px] shadow-lg shadow-surface-400";
-
-          if (index === getNextIndex(currentIndex))
-            className = "left-[70%] z-0 w-[297px] opacity-80";
+              "left-[50%] z-10 opacity-100 w-[479px] h-[269px] shadow-lg shadow-surface-400";
+          else if (index === getNextIndex(currentIndex))
+            className = "left-[70%] z-0 w-[297px] h-[167px] opacity-80";
 
           return (
             <CarouselItem
@@ -63,18 +66,24 @@ const Carousel = ({ carouselItems, className }: CarouselProps) => {
           );
         })}
       </div>
-      <div className="flex items-center gap-[10px] justify-center h-[46px]">
-        <Arrow onClick={handleClickPrev} />
-        {carouselItems.map((carouselItem, index) => (
-          <DotIndicator
-            key={carouselItem.index}
-            isActive={index === currentIndex}
-          />
-        ))}
-        <Arrow rotate onClick={handleClickNext} />
-      </div>
-      <p className="text-neutral-500 mt-1">
-        {carouselItems[currentIndex].description}
+      {carouselItems.length > 1 && (
+        <div className="flex items-center gap-[10px] justify-center h-[46px]">
+          {getPrevIndex(currentIndex) !== currentIndex && (
+            <Arrow onClick={handleClickPrev} />
+          )}
+          {carouselItems.map((carouselItem, index) => (
+            <DotIndicator
+              key={carouselItem.index}
+              isActive={index === currentIndex}
+            />
+          ))}
+          {getNextIndex(currentIndex) !== currentIndex && (
+            <Arrow rotate onClick={handleClickNext} />
+          )}
+        </div>
+      )}
+      <p className="text-neutral-500 mt-1 text-justify">
+        {carouselItems[currentIndex]?.description}
       </p>
     </div>
   );

@@ -4,7 +4,6 @@ import JobCard, { JobCardRef } from "@/app/components/JobCard";
 import Chip from "@/app/components/Chip";
 import { useEffect, useRef, useState } from "react";
 import Carousel from "@/app/components/Carousel/Carousel";
-import CarouselItem from "./Carousel/CarouselItem";
 
 const Experiences = () => {
   const jobCardRefs = useRef<(JobCardRef | null)[]>([]);
@@ -12,7 +11,6 @@ const Experiences = () => {
 
   useEffect(() => {
     jobCardRefs.current[0]?.setIsActive(true);
-    setActiveCardIndex(0);
   }, []);
 
   const onCardClick = (key: number) => {
@@ -46,7 +44,10 @@ const Experiences = () => {
             );
           })}
         </div>
-        <Carousel className="w-6/12" carouselItems={data.jobs[0].projects} />
+        <Carousel
+          className="w-6/12"
+          carouselItems={data.jobs[activeCardIndex].projects}
+        />
       </div>
     </>
   );

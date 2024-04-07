@@ -3,7 +3,7 @@
     {
       "index": 0,
       "fromDate": "06/23",
-      "toDate": "Now",
+      "toDate": "02/24",
       "company": "KnowCode",
       "description": "KnowCode is a company that helps other companies to deliver software faster, providing remote squads and CTO as a service.",
       "technologies": [
@@ -21,18 +21,18 @@
       "projects": [
         {
           "index": 0,
-          "description": "project 0",
-          "imageSrc": "https://images.unsplash.com/photo-1707343848723-bd87dea7b118?q=80&w=419&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          "description": "Victor is an AI that aims to assist developers and tech leaders in their project development process. Victor can simplify user stories, generating tasks to reach your goal. Also, Victor can analyze your tasks and offer insightful suggestions to enhance the execution of the task for the developers. With this, a faster development process can be achieved. Victor is available on Telegram, Trello and Jira.",
+          "imageSrc": "/victor.png"
         },
         {
           "index": 1,
-          "description": "project 1",
-          "imageSrc": "https://images.unsplash.com/photo-1682687982468-4584ff11f88a?q=80&w=419&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          "description": "GoFile is a digital media indexer designed to assist companies in locating their advertisements for campaign implementation in an easier manner. It allows users to upload, edit, view, and download media files.",
+          "imageSrc": "/gofile.png"
         },
         {
           "index": 2,
-          "description": "project 2",
-          "imageSrc": "https://images.unsplash.com/photo-1707655096635-89387f83f189?q=80&w=419&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          "description": "Whally was a web3 address tracker platform. With whally, you could get notifications about transactions that happened with the addresses that you were following on your Telegram account, being able to buy or sell faster.",
+          "imageSrc": "/whally.png"
         }
       ]
     },
@@ -46,8 +46,8 @@
       "projects": [
         {
           "index": 0,
-          "description": "ab",
-          "imageSrc": ""
+          "description": "In Funcamp, I participated in the development of a management system for the city hall of São José do Rio Preto. I worked as a backend developer, building things like a module for \"Cost Calculation\", allowing broad visualization of the locations and employees where the money is being invested. Also, I worked with some business rules and query methods to improve the data visualization.",
+          "imageSrc": "/dolibarr.jpeg"
         }
       ]
     }
