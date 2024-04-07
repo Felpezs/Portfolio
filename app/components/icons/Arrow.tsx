@@ -8,14 +8,14 @@ type ArrowProps = {
 
 const Arrow = ({ rotate, onClick, color }: ArrowProps) => {
   return (
-    <div onClick={onClick} className="cursor-pointer">
+    <div onClick={onClick} className={onClick ? "cursor-pointer" : undefined}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
         height="18"
         fill="none"
         viewBox="0 0 20 18"
-        className={rotate ? "transform rotate-180" : ""}
+        className={rotate ? "transform rotate-180" : undefined}
       >
         <path
           fill={color || "#B4B4B4"}
