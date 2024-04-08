@@ -2,7 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @layer base {
+  body {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :target {
+    scroll-margin-top: 80px; /*Adding navbar size to the margin*/
+  }
+}
+
+@layer utilities {
   h1 {
     @apply text-3xl;
     @apply tracking-tight;
@@ -18,16 +36,4 @@
     @apply tracking-tight;
     font-weight: 500;
   }
-}
-
-body {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-:target {
-  scroll-margin-top: 80px; /*Adding navbar size to the margin*/
 }
