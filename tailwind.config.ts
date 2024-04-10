@@ -54,6 +54,9 @@ const config: Config = {
           50: "#f9f9f9",
         },
       },
+      transitionProperty: {
+        width: "width",
+      },
     },
   },
   plugins: [],
