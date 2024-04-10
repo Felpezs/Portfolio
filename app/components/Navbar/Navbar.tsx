@@ -46,9 +46,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="dark:text-secondary-50 px-3 py-1 border-b-[3px] bg-surface-800 border-secondary-900 flex flex-row fixed top w-full z-30">
+    <nav className="top fixed z-30 flex w-full flex-row border-b-[3px] border-secondary-900 bg-surface-800 px-2 py-1 md:px-3 dark:text-secondary-50">
       <span
-        className="md:hidden cursor-pointer mr-auto"
+        className="mr-auto cursor-pointer md:hidden"
         onClick={() => {
           setTransition(true);
           handleMenu();
@@ -58,9 +58,9 @@ const Navbar = () => {
       </span>
 
       <ul
-        className={`transition-width ease-in-out duration-700 flex bg-surface-700 absolute flex-col h-[100vh] left-[0px] top-[0px] items-center justify-center text-[18px] ${
-          showMenu ? "w-[350px] " : "w-[0px]"
-        } gap-1 md:transition-none md:text-base md:flex md:flex-row md:h-auto md:w-auto md:bg-transparent md:left-auto md:top-auto md:static md:mr-auto`}
+        className={`absolute left-[0px] top-[0px] flex h-[100vh] flex-col items-center justify-center bg-surface-700 text-[18px] transition-width duration-700 ease-in-out ${
+          showMenu ? "w-[250px] " : "w-[0px]"
+        } gap-1 md:static md:left-auto md:top-auto md:mr-auto md:flex md:h-auto md:w-auto md:flex-row md:bg-transparent md:text-base md:transition-none`}
       >
         <span
           className="absolute right-1 top-1 cursor-pointer md:hidden"
@@ -81,12 +81,12 @@ const Navbar = () => {
               key={index}
               className={`${
                 transition ? "transition-all duration-200 ease-in-out" : ""
-              } hover:bg-surface-500 border-b-2 border-transparent hover:border-secondary-200 w-full hover:text-secondary-200 text-center ${
+              } w-full border-b-2 border-transparent text-center hover:border-secondary-200 hover:bg-surface-500 hover:text-secondary-200 ${
                 showMenu ? "opacity-100" : "opacity-0"
-              }  md:transition-none md:border-b-0 md:opacity-100`}
+              }  md:border-b-0 md:opacity-100 md:transition-none`}
             >
               <a
-                className="block w-full h-full p-1 md:p-[0px] md:inline-block md:w-auto md:h-auto"
+                className="block h-full w-full p-1 md:inline-block md:h-auto md:w-auto md:p-[0px]"
                 href={url}
                 onClick={() => {
                   setShowMenu(false);
@@ -99,11 +99,11 @@ const Navbar = () => {
         })}
       </ul>
       <div className="flex gap-1">
-        <div className="flex gap-[10px] items-center">
+        <div className="flex items-center gap-[10px]">
           <BrazilFlag />
           <UsFlag />
         </div>
-        <div className="flex gap-[10px] items-center">
+        <div className="flex items-center gap-[10px]">
           <SunIcon />
           <Switch />
           <MoonIcon />
