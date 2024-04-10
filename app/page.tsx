@@ -11,12 +11,18 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <div className="grid grid-cols-12 auto-cols-max gap-x-1 gap-y-5 mx-3">
-        <section id="home" className="col-span-full gap-y-1 mt-5 px-[16.89%]">
-          <h3 className="text-neutral-600 mb-1">Hello, I am</h3>
-          <h1 className="text-white mb-1">Felipe Eduardo</h1>
-          <h1 className="text-white mb-1">I&apos;m a software developer</h1>
-          <h3 className="text-neutral-600 mb-1 text-balance">
+      <div className="grid auto-cols-max grid-cols-4 gap-x-1 gap-y-5 px-2 md:grid-cols-8 md:px-[16.89%] lg:grid-cols-12">
+        <section id="home" className="col-span-full mt-5 gap-y-1 ">
+          <h3 className="mb-1 text-neutral-600 md:text-xl lg:text-3xl">
+            Hello, I am
+          </h3>
+          <h1 className="mb-1 text-balance text-white md:text-4xl lg:text-6xl">
+            Felipe Eduardo
+          </h1>
+          <h1 className="mb-1 text-balance text-white md:text-4xl lg:text-6xl">
+            I&apos;m a software developer
+          </h1>
+          <h3 className="mb-1 text-neutral-600 md:text-xl lg:text-3xl">
             I’m a developer specialized in the development of user interfaces,
             providing great experiences for the users.
           </h3>
@@ -26,17 +32,20 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section className="col-span-5 justify-center">
+        <section
+          id="about"
+          className="col-span-full grid grid-cols-subgrid place-items-center"
+        >
           <Image
             alt="My photo with an abstract object"
             src={"/shaped_photo.png"}
             width={452}
             height={577}
-            className="m-auto"
+            className="mx-auto hidden lg:col-span-5 lg:block"
           />
-        </section>
-        <section id="about" className="col-span-7 flex flex-col gap-2">
-          <About />
+          <div className="col-span-full flex flex-col items-center gap-2 lg:col-span-7">
+            <About />
+          </div>
         </section>
         <section id="experience" className="col-span-full">
           <Experiences />

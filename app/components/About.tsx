@@ -4,20 +4,20 @@ import Button from "./Button";
 const About = () => {
   return (
     <>
-      <h2 className="text-white">About me</h2>
-      <p className="text-neutral-500 text-lg">
+      <h2 className="text-white md:text-2xl lg:text-4xl">About me</h2>
+      <p className="text-balance text-base text-neutral-500 md:text-xl">
         Hello, I&apos;m Felipe Eduardo, a Frontend developer. I hold a
         Bachelor&apos;s degree in Information Systems from the School of
         Technology - UNICAMP. With over 4 years of experience in development, I
         am currently focused on creating exceptional interfaces for global
         users.
       </p>
-      <p className="text-neutral-500 text-lg">
+      <p className="text-balance text-base text-neutral-500 md:text-xl">
         I am passionate about assisting individuals in solving their problems
         and continuously exploring new technologies and methodologies to address
         challenges.
       </p>
-      <p className="text-neutral-500 text-lg">
+      <p className="text-balance text-base text-neutral-500 md:text-xl">
         What truly motivates me is the realization that my expertise is making a
         positive impact on others&apos; lives!
       </p>
@@ -26,7 +26,7 @@ const About = () => {
         onClick={() => {
           window.location.href = "#experience";
         }}
-        className="ml-auto"
+        className="lg:ml-auto"
       >
         Check My Experiences
       </Button>

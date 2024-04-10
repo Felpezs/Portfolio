@@ -22,7 +22,7 @@ const Button = ({
     <button
       onClick={onClick}
       className={
-        "rounded-full text-white h-[60px] px-2 py-[10px] text-base w-fit transition-colors flex items-center gap-[8px] disabled:bg-surface-400 " +
+        "flex h-[50px] w-fit items-center gap-[8px] rounded-full px-1 py-[10px] text-base text-white transition-colors disabled:bg-surface-400 md:h-[60px] md:px-2 " +
         (variant === "primary"
           ? "bg-primary-700 hover:bg-primary-500"
           : "bg-secondary-500 hover:bg-secondary-300") +
