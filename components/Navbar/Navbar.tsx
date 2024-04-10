@@ -8,15 +8,25 @@ import Switch from "./Switch";
 import Menu from "../icons/Menu";
 import { useEffect, useState } from "react";
 import Close from "../icons/Close";
-import { getCurrentBreakpoint } from "@/utils/getCurrentBreakpoint";
+import { getBreakpointValue } from "@/utils/getCurrentBreakpoint";
+import { useMediaQuery } from "react-responsive";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [transition, setTransition] = useState(false);
+  const [matches, setMatches] = useState(false);
+
+  const isAboveSm = useMediaQuery({
+    query: `(min-width: ${getBreakpointValue("md")}px)`,
+  });
 
   const handleMenu = () => {
     setShowMenu((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    setMatches(isAboveSm);
+  }, [isAboveSm]);
 
   useEffect(() => {
     if (showMenu === true) document.body.classList.add("no-scroll");
@@ -28,22 +38,12 @@ const Navbar = () => {
   }, [showMenu]);
 
   useEffect(() => {
-    const handleOrientationChange = () => {
-      const currentBreakpoint = getCurrentBreakpoint();
-
-      if (currentBreakpoint !== "" && currentBreakpoint !== "sm") {
-        setShowMenu(false);
-        setTransition(false);
-        document.body.classList.remove("no-scroll");
-      }
-    };
-
-    window.addEventListener("resize", handleOrientationChange);
-
-    return () => {
-      window.removeEventListener("resize", handleOrientationChange);
-    };
-  }, []);
+    if (matches) {
+      setShowMenu(false);
+      setTransition(false);
+      document.body.classList.remove("no-scroll");
+    }
+  }, [matches]);
 
   return (
     <nav className="top fixed z-30 flex w-full flex-row border-b-[3px] border-secondary-900 bg-surface-800 px-2 py-1 md:px-3 dark:text-secondary-50">

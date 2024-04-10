@@ -1,9 +1,9 @@
 "use client";
 import data from "@/json/jobs.json";
-import JobCard, { JobCardRef } from "@/app/components/JobCard";
-import Chip from "@/app/components/Chip";
+import JobCard, { JobCardRef } from "@/components/JobCard";
+import Chip from "@/components/Chip";
 import { useEffect, useRef, useState } from "react";
-import Carousel from "@/app/components/Carousel/Carousel";
+import Carousel from "@/components/Carousel/Carousel";
 
 const Experiences = () => {
   const jobCardRefs = useRef<(JobCardRef | null)[]>([]);
@@ -23,9 +23,9 @@ const Experiences = () => {
 
   return (
     <>
-      <h2 className="text-white text-center mb-2">Experiences</h2>
+      <h2 className="mb-2 text-center text-white">Experiences</h2>
       <div className="flex gap-1">
-        <div className="flex flex-col w-6/12 min-h-[230px]">
+        <div className="flex min-h-[230px] w-full flex-col lg:w-6/12">
           {data.jobs.map((job, i) => {
             return (
               <JobCard
@@ -45,7 +45,7 @@ const Experiences = () => {
           })}
         </div>
         <Carousel
-          className="w-6/12"
+          className="hidden w-6/12 lg:block"
           carouselItems={data.jobs[activeCardIndex].projects}
         />
       </div>
