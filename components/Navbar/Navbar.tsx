@@ -8,25 +8,16 @@ import Switch from "./Switch";
 import Menu from "../icons/Menu";
 import { useEffect, useState } from "react";
 import Close from "../icons/Close";
-import { getBreakpointValue } from "@/utils/getCurrentBreakpoint";
-import { useMediaQuery } from "react-responsive";
+import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [transition, setTransition] = useState(false);
-  const [matches, setMatches] = useState(false);
-
-  const isAboveSm = useMediaQuery({
-    query: `(min-width: ${getBreakpointValue("md")}px)`,
-  });
+  const matches = useBreakpoint("md", "min-width");
 
   const handleMenu = () => {
     setShowMenu((prevState) => !prevState);
   };
-
-  useEffect(() => {
-    setMatches(isAboveSm);
-  }, [isAboveSm]);
 
   useEffect(() => {
     if (showMenu === true) document.body.classList.add("no-scroll");

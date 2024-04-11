@@ -4,10 +4,12 @@ import JobCard, { JobCardRef } from "@/components/JobCard";
 import Chip from "@/components/Chip";
 import { useEffect, useRef, useState } from "react";
 import Carousel from "@/components/Carousel/Carousel";
+import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 const Experiences = () => {
   const jobCardRefs = useRef<(JobCardRef | null)[]>([]);
   const [activeCardIndex, setActiveCardIndex] = useState<number>(0);
+  const matches = useBreakpoint("lg", "min-width");
 
   useEffect(() => {
     jobCardRefs.current[0]?.setIsActive(true);
@@ -44,10 +46,12 @@ const Experiences = () => {
             );
           })}
         </div>
-        <Carousel
-          className="hidden w-6/12 lg:block"
-          carouselItems={data.jobs[activeCardIndex].projects}
-        />
+        {matches && (
+          <Carousel
+            className="w-6/12"
+            carouselItems={data.jobs[activeCardIndex].projects}
+          />
+        )}
       </div>
     </>
   );
