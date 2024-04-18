@@ -2,13 +2,15 @@
   "jobs": [
     {
       "index": 0,
-      "fromDate": "06/23",
-      "toDate": "02/24",
+      "date": "June 2023 - March 2024",
+      "role": "FullStack Software Engineer",
       "company": "KnowCode",
-      "description": "KnowCode is a company that helps other companies to deliver software faster, providing remote squads and CTO as a service.",
+      "description": "At Knowcode, I worked as a Fullstack Software Engineer in a multicultural team. I helped them developing new products and MVPs for their clients. I worked mostly with Frontend, turning design into code, creating components, tests and etc. But also I worked with some stuff on Backend, managing database relationships and APIs. Also, I took care of some deploys.",
       "technologies": [
         "React",
         "NextJS",
+        "Jest",
+        "React Testing Library",
         "Javascript",
         "HTML",
         "CSS",
@@ -17,38 +19,32 @@
         "Python",
         "Docker",
         "MongoDB"
-      ],
-      "projects": [
-        {
-          "index": 0,
-          "description": "Victor is an AI that aims to assist developers and tech leaders in their project development process. Victor can simplify user stories, generating tasks to reach your goal. Also, Victor can analyze your tasks and offer insightful suggestions to enhance the execution of the task for the developers. With this, a faster development process can be achieved. Victor is available on Telegram, Trello and Jira.",
-          "imageSrc": "/victor.png"
-        },
-        {
-          "index": 1,
-          "description": "GoFile is a digital media indexer designed to assist companies in locating their advertisements for campaign implementation in an easier manner. It allows users to upload, edit, view, and download media files.",
-          "imageSrc": "/gofile.png"
-        },
-        {
-          "index": 2,
-          "description": "Whally was a web3 address tracker platform. With whally, you could get notifications about transactions that happened with the addresses that you were following on your Telegram account, being able to buy or sell faster.",
-          "imageSrc": "/whally.png"
-        }
       ]
     },
     {
       "index": 1,
-      "fromDate": "07/22",
-      "toDate": "06/23",
+      "date": "July 2022 - June 2023",
+      "role": "Backend developer",
       "company": "Funcamp",
-      "description": "Funcamp is a company that acts as an intermediary for contracts for UNICAMP college, managing various projects. Worked as a backend developer on one of the LARCOM projects.",
-      "technologies": ["Javascript", "PHP", "MariaDB", "Python", "Docker"],
-      "projects": [
-        {
-          "index": 0,
-          "description": "In Funcamp, I participated in the development of a management system for the city hall of São José do Rio Preto. I worked as a backend developer, building things like a module for \"Cost Calculation\", allowing broad visualization of the locations and employees where the money is being invested. Also, I worked with some business rules and query methods to improve the data visualization.",
-          "imageSrc": "/dolibarr.jpeg"
-        }
+      "description": "At Funcamp, I worked on one of the LARCOM projects as a Backend developer. There, I managed database relationships, joining data from multiple tables. This was used for creating a module to visualize where the resources are being used by the city hall. Also, worked with files manipulation and cleanup in Python to be used in the tables.",
+      "technologies": ["Javascript", "PHP", "MariaDB", "Python", "Docker"]
+    },
+    {
+      "index": 2,
+      "date": "March 2020 - February 2024",
+      "role": "Bachelor in Information Systems",
+      "company": "Unicamp",
+      "description": "Studying at Unicamp was such a great opportunity to improve my knowledges about programming. I learned about project management, algorithms, design patterns and a lot of technologies. I'm really proud that I got this degree.",
+      "technologies": [
+        "Javascript",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MariaDB",
+        "Python",
+        "C",
+        "Java",
+        "Flutter"
       ]
     }
   ]

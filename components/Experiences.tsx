@@ -1,57 +1,44 @@
 "use client";
 import data from "@/json/jobs.json";
-import JobCard, { JobCardRef } from "@/components/JobCard";
-import Chip from "@/components/Chip";
-import { useEffect, useRef, useState } from "react";
-import Carousel from "@/components/Carousel/Carousel";
-import { useBreakpoint } from "@/hooks/useBreakpoint";
+import { useState } from "react";
+import Chip from "./Chip";
 
 const Experiences = () => {
-  const jobCardRefs = useRef<(JobCardRef | null)[]>([]);
-  const [activeCardIndex, setActiveCardIndex] = useState<number>(0);
-  const matches = useBreakpoint("lg", "min-width");
-
-  useEffect(() => {
-    jobCardRefs.current[0]?.setIsActive(true);
-  }, []);
-
-  const onCardClick = (key: number) => {
-    if (key === activeCardIndex) return;
-
-    jobCardRefs.current[activeCardIndex]?.setIsActive(false);
-    jobCardRefs.current[key]?.setIsActive(true);
-    setActiveCardIndex(key);
-  };
+  const [activeJob, setActiveJob] = useState(data.jobs[0].index ?? null);
+  const jobs = data.jobs;
 
   return (
     <>
-      <h2 className="mb-2 text-center text-white">Experiences</h2>
-      <div className="flex gap-1">
-        <div className="flex min-h-[230px] w-full flex-col lg:w-6/12">
-          {data.jobs.map((job, i) => {
-            return (
-              <JobCard
-                key={job.index}
-                company={job.company}
-                description={job.description}
-                fromDate={job.fromDate}
-                toDate={job.toDate}
-                ref={(el) => (jobCardRefs.current[i] = el)}
-                onClick={() => onCardClick(job.index)}
-              >
-                {job.technologies.map((technology, index) => (
-                  <Chip key={index}>{technology}</Chip>
-                ))}
-              </JobCard>
-            );
-          })}
+      <h2 className="col-span-full mb-2 text-3xl text-white lg:text-4xl">
+        Experiences
+      </h2>
+      <ul className="col-span-1 h-fit rounded-md bg-surface-600 text-lg text-secondary-50 sm:col-span-3">
+        {jobs.map((job) => (
+          <li
+            key={job.index}
+            className={`cursor-pointer border-l-4 p-1 transition-colors  ${activeJob == job.index ? "border-secondary-300 text-secondary-200" : "border-transparent hover:border-secondary-300 hover:text-secondary-200"}`}
+            onClick={() => {
+              setActiveJob(job.index);
+            }}
+          >
+            {job.company}
+          </li>
+        ))}
+      </ul>
+      <div className="col-span-9 min-h-[300px] text-white">
+        <div className="mb-1 flex items-center justify-between">
+          <h3 className="text-2xl">{jobs[activeJob].role}</h3>
+          <span className="text-neutral-300">{jobs[activeJob].date}</span>
         </div>
-        {matches && (
-          <Carousel
-            className="w-6/12"
-            carouselItems={data.jobs[activeCardIndex].projects}
-          />
-        )}
+        <h3 className="mb-1 text-secondary-300">{jobs[activeJob].company}</h3>
+        <p className="mb-1 text-lg text-neutral-500">
+          {jobs[activeJob].description}
+        </p>
+        <div className="flex flex-wrap gap-[10px]">
+          {jobs[activeJob].technologies.map((technology, index) => (
+            <Chip key={index}>{technology}</Chip>
+          ))}
+        </div>
       </div>
     </>
   );
