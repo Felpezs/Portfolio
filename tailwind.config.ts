@@ -14,6 +14,8 @@ const config: Config = {
       5: "200px",
     },
     fontSize: {
+      xs: ["0.688rem", "120%"],
+      sm: ["0.812rem", "120%"],
       base: ["1rem", "120%"],
       lg: ["1.250rem", "120%"],
       xl: ["1.500rem", "120%"],
