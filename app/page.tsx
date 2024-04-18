@@ -1,18 +1,21 @@
 import Image from "next/image";
-import Navbar from "@/app/components/Navbar/Navbar";
-import ArrowCircle from "@/app/components/icons/ArrowCircle";
-import About from "@/app/components/About";
-import Experiences from "./components/Experiences";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer";
+import Navbar from "@/components/Navbar/Navbar";
+import ArrowCircle from "@/components/icons/ArrowCircle";
+import About from "@/components/About";
+import Experiences from "../components/Experiences";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
-      <div className="grid auto-cols-max grid-cols-4 gap-x-1 gap-y-5 px-2 md:grid-cols-8 md:px-[16.89%] lg:grid-cols-12">
-        <section id="home" className="col-span-full mt-5 gap-y-1 ">
+      <div className="grid auto-cols-max grid-cols-4 gap-x-1 px-2 md:grid-cols-8 md:px-[16.89%] lg:grid-cols-12 [&>*:not(:first-child)]:mb-5">
+        <section
+          id="home"
+          className="col-span-full mt-[80px] flex h-screen flex-col justify-center gap-y-1"
+        >
           <h3 className="mb-1 text-neutral-600 md:text-xl lg:text-3xl">
             Hello, I am
           </h3>
@@ -47,7 +50,10 @@ export default function Home() {
             <About />
           </div>
         </section>
-        <section id="experience" className="col-span-full">
+        <section
+          id="experiences"
+          className="col-span-full grid grid-cols-subgrid"
+        >
           <Experiences />
         </section>
         <section id="projects" className="col-span-full">

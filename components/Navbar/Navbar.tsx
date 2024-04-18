@@ -63,7 +63,7 @@ const Navbar = () => {
         {[
           ["Home", "#home"],
           ["About", "#about"],
-          ["Experience", "#experience"],
+          ["Experiences", "#experiences"],
           ["Projects", "#projects"],
           ["Contact", "#contact"],
         ].map(([title, url], index) => {
