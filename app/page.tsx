@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import ArrowCircle from "@/components/icons/ArrowCircle";
 import About from "@/components/About";
 import Experiences from "../components/Experiences";
-import Projects from "../components/Projects";
+import Projects from "../components/Projects/Projects";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer";
 

@@ -1,7 +1,6 @@
 "use client";
 
-import Button from "./Button";
-import Chip from "./Chip";
+import Button from "../Button";
 import ProjectCard from "./ProjectCard";
 import data from "@/json/projects.json";
 
@@ -14,7 +13,7 @@ const Projects = () => {
       <p className="mb-2 text-center text-lg text-neutral-500">
         What I&apos;ve been building
       </p>
-      <div className="mb-2 flex items-stretch justify-center gap-1">
+      <div className="mb-2 flex flex-wrap items-stretch justify-center gap-1">
         {data.projects.map((project) => (
           <ProjectCard
             key={project.index}
@@ -23,11 +22,8 @@ const Projects = () => {
             description={project.description}
             projectTitle={project.title}
             projectUrl={project.url}
-          >
-            {project.technologies.map((stack) => (
-              <Chip key={stack.index}>{stack.name}</Chip>
-            ))}
-          </ProjectCard>
+            technologies={project.technologies}
+          />
         ))}
       </div>
       <a
