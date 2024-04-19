@@ -24,7 +24,7 @@ const About = () => {
       <Button
         variant="primary"
         onClick={() => {
-          window.location.href = "#experience";
+          window.location.href = "#experiences";
         }}
         className="lg:ml-auto"
       >
