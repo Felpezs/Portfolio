@@ -8,12 +8,14 @@ import data from "@/json/projects.json";
 const Projects = () => {
   return (
     <>
-      <h2 className="text-white text-center mb-2">Projects</h2>
-      <p className="text-neutral-500 text-lg text-center mb-2">
+      <h2 className="mb-1 text-center text-3xl text-white lg:text-4xl">
+        Projects
+      </h2>
+      <p className="mb-2 text-center text-lg text-neutral-500">
         What I&apos;ve been building
       </p>
-      <div className="flex items-stretch gap-1 justify-center mb-2">
-        {data.projects.map((project, index) => (
+      <div className="mb-2 flex items-stretch justify-center gap-1">
+        {data.projects.map((project) => (
           <ProjectCard
             key={project.index}
             imageSrc={project.imageSrc}
@@ -22,7 +24,7 @@ const Projects = () => {
             projectTitle={project.title}
             projectUrl={project.url}
           >
-            {project.technologies.map((stack, index) => (
+            {project.technologies.map((stack) => (
               <Chip key={stack.index}>{stack.name}</Chip>
             ))}
           </ProjectCard>
@@ -32,7 +34,7 @@ const Projects = () => {
         href="https://github.com/Felpezs"
         target="_blank"
         referrerPolicy="no-referrer"
-        className="block w-fit mx-auto"
+        className="mx-auto block w-fit"
       >
         <Button variant="primary">See All</Button>
       </a>
