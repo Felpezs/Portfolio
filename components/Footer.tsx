@@ -2,7 +2,7 @@ import ArrowCircle from "./icons/ArrowCircle";
 
 const Footer = () => {
   return (
-    <div className="border-t-[3px] border-secondary-900 text-neutral-600 py-1 px-3 flex justify-between">
+    <div className="flex justify-between gap-2 border-t-[3px] border-secondary-900 px-3 py-1 text-neutral-600">
       <p className="max-w-[700px]">
         Designed in <span className="text-neutral-100">Figma</span> and
         developed in Visual Studio Code. Built with{" "}
@@ -11,7 +11,7 @@ const Footer = () => {
         <span className="text-neutral-100">Typescript</span>. By Felipe Eduardo
         with ❤️
       </p>
-      <div className="flex text-neutral-600 justify-between min-w-[221px] items-center">
+      <div className="flex items-center justify-between gap-1 text-neutral-600">
         <a
           href="https://github.com/Felpezs"
           target="_blank"
