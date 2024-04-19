@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <div className="grid auto-cols-max grid-cols-4 gap-x-1 px-2 md:grid-cols-8 md:px-[16.89%] lg:grid-cols-12 [&>*:not(:first-child):not(last-child)]:mb-5">
+      <div className="grid auto-cols-max grid-cols-4 gap-x-1 px-2 md:grid-cols-8 md:px-3 lg:grid-cols-12 [&>*:not(:first-child):not(last-child)]:mb-5">
         <section
           id="home"
           className="col-span-full mt-[80px] flex h-screen flex-col justify-center gap-y-1"
