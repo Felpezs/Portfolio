@@ -37,7 +37,7 @@ const Navbar = () => {
   }, [matches]);
 
   return (
-    <nav className="top fixed z-30 flex w-full flex-row border-b-[3px] border-secondary-900 bg-surface-800 px-2 py-1 md:px-3 dark:text-secondary-50">
+    <nav className="top fixed z-30 flex w-full flex-row gap-1 border-b-[3px] border-secondary-900 bg-surface-800 px-2 py-1 md:px-2 lg:px-3 dark:text-secondary-50">
       <span
         className="mr-auto cursor-pointer md:hidden"
         onClick={() => {
@@ -51,7 +51,7 @@ const Navbar = () => {
       <ul
         className={`absolute left-[0px] top-[0px] flex h-[100vh] flex-col items-center justify-center bg-surface-700 text-[18px] transition-width duration-700 ease-in-out ${
           showMenu ? "w-[250px] " : "w-[0px]"
-        } gap-1 md:static md:left-auto md:top-auto md:mr-auto md:flex md:h-auto md:w-auto md:flex-row md:bg-transparent md:text-base md:transition-none`}
+        } basis-[484px] gap-[20px] md:static md:mr-auto md:flex md:h-auto md:w-auto md:flex-row md:bg-transparent md:text-base md:transition-none`}
       >
         <span
           className="absolute right-1 top-1 cursor-pointer md:hidden"
@@ -72,7 +72,7 @@ const Navbar = () => {
               key={index}
               className={`${
                 transition ? "transition-all duration-200 ease-in-out" : ""
-              } w-full border-b-2 border-transparent text-center hover:border-secondary-200 hover:bg-surface-500 hover:text-secondary-200 ${
+              } w-fit border-b-2 border-transparent text-center hover:border-secondary-200 hover:bg-surface-500 hover:text-secondary-200 ${
                 showMenu ? "opacity-100" : "opacity-0"
               }  md:border-b-0 md:opacity-100 md:transition-none`}
             >
@@ -88,16 +88,34 @@ const Navbar = () => {
             </li>
           );
         })}
+        {/* <li
+          className={`${
+            transition ? "transition-all duration-200 ease-in-out" : ""
+          } w-fit border-b-2 border-transparent text-center hover:border-secondary-200 hover:bg-surface-500 hover:text-secondary-200 ${
+            showMenu ? "opacity-100" : "opacity-0"
+          }  md:border-b-0 md:opacity-100 md:transition-none`}
+        >
+          <a
+            className="block rounded-md bg-secondary-600 px-[10px] py-[5px] transition-colors hover:bg-secondary-500 hover:text-white"
+            href="https://drive.google.com/file/d/1OBYn-fS2UEuEKM-BNYDwgBIJfCxcs3uR/view?usp=sharing"
+          >
+            Resume
+          </a>
+        </li> */}
       </ul>
-      <div className="flex gap-1">
-        <div className="flex items-center gap-[10px]">
+      <div className="flex basis-[186px] gap-[10px]">
+        <div className="flex basis-[64px] items-center gap-[10px]">
           <BrazilFlag />
           <UsFlag />
         </div>
-        <div className="flex items-center gap-[10px]">
-          <SunIcon />
+        <div className="flex basis-[112px] items-center gap-[10px]">
+          <span>
+            <SunIcon />
+          </span>
           <Switch />
-          <MoonIcon />
+          <span>
+            <MoonIcon />
+          </span>
         </div>
       </div>
     </nav>

@@ -8,6 +8,7 @@ function UsFlag() {
       height={20}
       viewBox="0 0 27 20"
       fill="none"
+      className="basis-[27px]"
     >
       <g clipPath="url(#clip0_41_118)">
         <mask
