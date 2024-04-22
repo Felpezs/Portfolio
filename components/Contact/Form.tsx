@@ -62,7 +62,7 @@ const Form = ({
       />
       <Button
         variant="secondary"
-        className="mt-[16px]"
+        className="mt-[16px] self-end"
         icon={<Arrow rotate color="white" />}
         isLoading={isLoading}
       >

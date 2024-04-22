@@ -7,12 +7,12 @@ const Footer = ({
   dictionary: Awaited<ReturnType<typeof getDictionary>>["footer"];
 }) => {
   return (
-    <div className="flex justify-between gap-2 border-t-[3px] border-secondary-900 px-3 py-1 text-neutral-600">
+    <div className="flex flex-col justify-between gap-2 border-t-[3px] border-secondary-900 px-3 py-1 text-neutral-600 sm:flex-row">
       <p className="max-w-[700px]">
         {dictionary.description[0]}{" "}
         <span className="text-neutral-100">Figma</span>{" "}
         {dictionary.description[1]}{" "}
-        <span className="text-neutral-100">NextJS</span>,
+        <span className="text-neutral-100">NextJS</span>,{" "}
         <span className="text-neutral-100">TailwindCSS</span>{" "}
         {dictionary.description[2]}{" "}
         <span className="text-neutral-100">Typescript</span>. By Felipe Eduardo
