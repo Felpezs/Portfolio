@@ -17,7 +17,7 @@ const About = () => {
         and continuously exploring new technologies and methodologies to address
         challenges.
       </p>
-      <p className="text-base text-neutral-500 md:text-lg">
+      <p className="text-left text-base text-neutral-500 md:text-lg">
         What truly motivates me is the realization that my expertise is making a
         positive impact on others&apos; lives!
       </p>
