@@ -97,7 +97,7 @@ const Navbar = () => {
         >
           <a
             className="block rounded-md bg-secondary-600 px-[10px] py-[5px] transition-colors hover:bg-secondary-500 hover:text-white"
-            href="https://drive.google.com/file/d/1OBYn-fS2UEuEKM-BNYDwgBIJfCxcs3uR/view?usp=sharing"
+            href={process.env.NEXT_PUBLIC_RESUME_LINK}
           >
             Resume
           </a>
