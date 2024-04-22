@@ -4,7 +4,7 @@
       "index": 0,
       "imageSrc": "/reactgram.png",
       "imageAlt": "Photo of reactgram project",
-      "description": "This project aims to create a clone of instagram, containing posts, comments and basic login stuff",
+      "description": "This project aims to create a clone of instagram, containing posts, comments and basic login stuff.",
       "url": "https://github.com/Felpezs/reactgram",
       "title": "Reactgram",
       "technologies": [
@@ -20,7 +20,7 @@
       "index": 1,
       "imageSrc": "/angularBlog.png",
       "imageAlt": "E-sports blog",
-      "description": "This project aims to create a blog for sharing e-sports content",
+      "description": "The goal of this project was to create a blog for sharing e-sports content using Angular.",
       "url": "https://blog-angular-ten.vercel.app",
       "title": "E-sports blog",
       "technologies": [
@@ -33,7 +33,7 @@
       "index": 2,
       "imageSrc": "/spotifyClone.png",
       "imageAlt": "Photo of spotify landing page",
-      "description": "This project aims to create a clone of spotify landing page, with a responsive design",
+      "description": "This project is a clone of spotify landing page, with a responsive design.",
       "url": "https://spotify-clone-brown-three.vercel.app",
       "title": "Spotify Clone",
       "technologies": [

@@ -25,7 +25,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div
-      className="flex h-[450px] w-[330px] cursor-pointer flex-col rounded-[20px] border-[1px] border-transparent bg-surface-600 p-1 transition-all ease-in-out hover:scale-105 hover:border-secondary-300"
+      className="flex h-[450px] max-w-[350px] flex-grow basis-[300px] cursor-pointer flex-col rounded-[20px] border-[1px] border-transparent bg-surface-600 p-1 transition-all ease-in-out hover:scale-105 hover:border-secondary-300"
       onClick={() => navigate(projectUrl)}
     >
       <Image
