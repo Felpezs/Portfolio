@@ -10,6 +10,9 @@ import { useEffect, useState } from "react";
 import Close from "../icons/Close";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import { getDictionary } from "@/get-dictionary";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Locale } from "@/i18n-config";
 
 const Navbar = ({
   dictionary,
@@ -19,6 +22,14 @@ const Navbar = ({
   const [showMenu, setShowMenu] = useState(false);
   const [transition, setTransition] = useState(false);
   const matches = useBreakpoint("md", "min-width");
+
+  const pathName = usePathname();
+  const redirectedPathName = (locale: Locale) => {
+    if (!pathName) return "/";
+    const segments = pathName.split("/");
+    segments[1] = locale;
+    return segments.join("/");
+  };
 
   const handleMenu = () => {
     setShowMenu((prevState) => !prevState);
@@ -110,8 +121,12 @@ const Navbar = ({
       </ul>
       <div className="flex basis-[186px] gap-[10px]">
         <div className="flex basis-[64px] items-center gap-[10px]">
-          <BrazilFlag />
-          <UsFlag />
+          <Link href={redirectedPathName("pt-BR")}>
+            <BrazilFlag />
+          </Link>
+          <Link href={redirectedPathName("en-US")}>
+            <UsFlag />
+          </Link>
         </div>
         <div className="flex basis-[112px] items-center gap-[10px]">
           <span>
