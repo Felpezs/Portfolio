@@ -2,10 +2,19 @@
   "jobs": [
     {
       "index": 0,
-      "date": "June 2023 - March 2024",
-      "role": "FullStack Software Engineer",
+      "date": {
+        "en-US": "June 2023 - March 2024",
+        "pt-BR": "Junho 2023 - Março 2024"
+      },
+      "role": {
+        "en-US": "FullStack Software Engineer",
+        "pt-BR": "Engenheiro de Software Fullstack"
+      },
       "company": "KnowCode",
-      "description": "At Knowcode, I worked as a Fullstack Software Engineer in a multicultural team. I helped them developing new products and MVPs for their clients. I worked mostly with Frontend, turning design into code, creating components, tests and etc. But also I worked with some stuff on Backend, managing database relationships and APIs. Also, I took care of some deploys.",
+      "description": {
+        "en-US": "At Knowcode, I worked as a Fullstack Software Engineer in a multicultural team. I helped them developing new products and MVPs for their clients. I worked mostly with Frontend, turning design into code, creating components, tests and etc. But also I worked with some stuff on Backend, managing database relationships and APIs. Also, I took care of some deploys.",
+        "pt-BR": "Na Knowcode, trabalhei como Engenheiro de Software Fullstack em uma equipe multicultural. Ajudei-os a desenvolver novos produtos e MVPs para seus clientes. Trabalhei principalmente com Frontend, transformando design em código, criando componentes, testes, etc. Mas também trabalhei em algumas atividades no Backend, gerenciando relacionamentos de banco de dados e APIs. Além disso, cuidei de algumas publicações."
+      },
       "technologies": [
         "React",
         "NextJS",
@@ -23,18 +32,36 @@
     },
     {
       "index": 1,
-      "date": "July 2022 - June 2023",
-      "role": "Backend developer",
+      "date": {
+        "en-US": "July 2022 - June 2023",
+        "pt-BR": "Julho 2022 - Junho 2023"
+      },
+      "role": {
+        "en-US": "Backend developer",
+        "pt-BR": "Desenvolvedor Backend"
+      },
       "company": "Funcamp",
-      "description": "At Funcamp, I worked on one of the LARCOM projects as a Backend developer. There, I managed database relationships, joining data from multiple tables. This was used for creating a module to visualize where the resources are being used by the city hall. Also, worked with files manipulation and cleanup in Python to be used in the tables.",
+      "description": {
+        "en-US": "At Funcamp, I worked on one of the LARCOM projects as a Backend developer. There, I managed database relationships, joining data from multiple tables. This was used for creating a module to visualize where the resources are being used by the city hall. Also, worked with files manipulation and cleanup in Python to be used in the tables.",
+        "pt-BR": "Na Funcamp, trabalhei em um dos projetos do LARCOM como desenvolvedor Backend. Lá, gerenciei relacionamentos de banco de dados, unindo dados de várias tabelas. Isso foi usado para criar um módulo para visualizar onde os recursos estão sendo utilizados pela prefeitura. Além disso, trabalhei com manipulação e limpeza de arquivos em Python para serem usados nas tabelas."
+      },
       "technologies": ["Javascript", "PHP", "MariaDB", "Python", "Docker"]
     },
     {
       "index": 2,
-      "date": "March 2020 - February 2024",
-      "role": "Bachelor in Information Systems",
+      "date": {
+        "en-US": "March 2020 - February 2024",
+        "pt-BR": "Março 2020 - Fevereiro 2024"
+      },
+      "role": {
+        "en-US": "Bachelor in Information Systems",
+        "pt-BR": "Bacharel em Sistemas de Informação"
+      },
       "company": "Unicamp",
-      "description": "Studying at Unicamp was such a great opportunity to improve my knowledges about programming. I learned about project management, algorithms, design patterns and a lot of technologies. I'm really proud that I got this degree.",
+      "description": {
+        "en-US": "Studying at Unicamp was such a great opportunity to improve my knowledges about programming and interpersonal relationship. I learned about project management, algorithms, design patterns and a lot of technologies. I'm really proud that I got this degree.",
+        "pt-BR": "Estudar na Unicamp foi uma ótima oportunidade para aprimorar meus conhecimentos em programação e relacionamento interpessoal. Aprendi sobre gerenciamento de projetos, algoritmos, padrões de design e muitas tecnologias. Estou realmente orgulhoso por ter obtido esse diploma."
+      },
       "technologies": [
         "Javascript",
         "HTML",

@@ -3,8 +3,13 @@
 import { FormEvent, useState } from "react";
 import Button from "../Button";
 import Arrow from "../icons/Arrow";
+import { getDictionary } from "@/get-dictionary";
 
-const Form = () => {
+const Form = ({
+  dictionary,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["contact"];
+}) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -39,7 +44,7 @@ const Form = () => {
         className="rounded-[16px] border-2 border-surface-400 bg-surface-500  px-[16px] py-[12px] text-white  outline-none transition-all placeholder:text-white focus:border-secondary-600"
         type="text"
         required
-        placeholder="Name"
+        placeholder={dictionary.form.name}
         name="name"
       />
       <input
@@ -52,7 +57,7 @@ const Form = () => {
       <textarea
         className="flex-grow rounded-[16px] border-2 border-surface-400  bg-surface-500 px-[16px] py-[12px]  text-white outline-none transition-all placeholder:text-white focus:border-secondary-600"
         required
-        placeholder="Your message"
+        placeholder={dictionary.form.message}
         name="body"
       />
       <Button
@@ -61,7 +66,7 @@ const Form = () => {
         icon={<Arrow rotate color="white" />}
         isLoading={isLoading}
       >
-        Send me a message
+        {dictionary.form.button}
       </Button>
     </form>
   );

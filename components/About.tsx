@@ -1,25 +1,23 @@
 "use client";
+import { getDictionary } from "@/get-dictionary";
 import Button from "./Button";
 
-const About = () => {
+const About = ({
+  dictionary,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["about"];
+}) => {
   return (
     <>
-      <h2 className="text-3xl text-white lg:text-4xl">About me</h2>
+      <h2 className="text-3xl text-white lg:text-4xl">{dictionary.title}</h2>
       <p className="text-base text-neutral-500 md:text-lg">
-        Hello, I&apos;m Felipe Eduardo, a Frontend developer. I hold a
-        Bachelor&apos;s degree in Information Systems from the School of
-        Technology - UNICAMP. With over 4 years of experience in development, I
-        am currently focused on creating exceptional interfaces for global
-        users.
+        {dictionary.content[0]}
       </p>
       <p className="text-base text-neutral-500 md:text-lg">
-        I am passionate about assisting individuals in solving their problems
-        and continuously exploring new technologies and methodologies to address
-        challenges.
+        {dictionary.content[1]}
       </p>
       <p className="text-left text-base text-neutral-500 md:text-lg">
-        What truly motivates me is the realization that my expertise is making a
-        positive impact on others&apos; lives!
+        {dictionary.content[2]}
       </p>
       <Button
         variant="primary"
@@ -28,7 +26,7 @@ const About = () => {
         }}
         className="lg:ml-auto"
       >
-        Check My Experiences
+        {dictionary.button}
       </Button>
     </>
   );

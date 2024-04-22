@@ -2,20 +2,25 @@ import Avatar from "./Avatar";
 import Linkedin from "../icons/Linkedin";
 import Github from "../icons/Github";
 import Form from "./Form";
+import { getDictionary } from "@/get-dictionary";
 
-const Contact = () => {
+const Contact = ({
+  dictionary,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["contact"];
+}) => {
   return (
     <div className="flex min-h-[410px] flex-col gap-2 rounded-[20px] bg-surface-700 px-3 py-1 md:flex-row md:justify-between md:gap-4">
       <div className="flex flex-grow flex-col gap-2 md:basis-[500px]">
         <Avatar />
         <div>
           <p className="mb-1 text-xl tracking-wider text-white md:text-2xl">
-            Interested in working with me ?
+            {dictionary.title}
           </p>
           <p className="mb-1 text-base text-neutral-500">
-            I’m always looking forward for new opportunities. Send an email to{" "}
-            <span className="text-neutral-50">felipeedfreire@gmail.com</span> or
-            reach me out in a social media.
+            {dictionary.description[0]}{" "}
+            <span className="text-neutral-50">felipeedfreire@gmail.com</span>{" "}
+            {dictionary.description[1]}
           </p>
           <div className="flex gap-[8px]">
             <a
@@ -39,7 +44,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Form />
+      <Form dictionary={dictionary} />
     </div>
   );
 };

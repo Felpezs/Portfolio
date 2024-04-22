@@ -4,7 +4,10 @@
       "index": 0,
       "imageSrc": "/reactgram.png",
       "imageAlt": "Photo of reactgram project",
-      "description": "This project aims to create a clone of instagram, containing posts, comments and basic login stuff.",
+      "description": {
+        "en-US": "This project aims to create a clone of instagram, containing posts, comments and basic login stuff.",
+        "pt-BR": "Esse projeto teve como objetivo criar um clone do instagram, contendo postagens, comentáriios e sistema básico de login."
+      },
       "url": "https://github.com/Felpezs/reactgram",
       "title": "Reactgram",
       "technologies": [
@@ -20,7 +23,10 @@
       "index": 1,
       "imageSrc": "/angularBlog.png",
       "imageAlt": "E-sports blog",
-      "description": "The goal of this project was to create a blog for sharing e-sports content using Angular.",
+      "description": {
+        "en-US": "The goal of this project was to create a blog for sharing e-sports content using Angular.",
+        "pt-BR": "O objetivo deste projeto era de criar um blog para compartilhar contéudo de e-sports usando Angular."
+      },
       "url": "https://blog-angular-ten.vercel.app",
       "title": "E-sports blog",
       "technologies": [
@@ -33,7 +39,10 @@
       "index": 2,
       "imageSrc": "/spotifyClone.png",
       "imageAlt": "Photo of spotify landing page",
-      "description": "This project is a clone of spotify landing page, with a responsive design.",
+      "description": {
+        "en-US": "This project is a clone of spotify landing page, with a responsive design.",
+        "pt-BR": "Esse projeto se trata de um clone de uma landing page do spotify, com design responsivo."
+      },
       "url": "https://spotify-clone-brown-three.vercel.app",
       "title": "Spotify Clone",
       "technologies": [

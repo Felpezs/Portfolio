@@ -2,15 +2,23 @@
 import data from "@/json/jobs.json";
 import { useState } from "react";
 import Chip from "./Chip";
+import { getDictionary } from "@/get-dictionary";
+import { Locale } from "@/i18n-config";
 
-const Experiences = () => {
+const Experiences = ({
+  dictionary,
+  lang,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["experiences"];
+  lang: Locale;
+}) => {
   const [activeJob, setActiveJob] = useState(data.jobs[0].index ?? null);
   const jobs = data.jobs;
 
   return (
     <>
       <h2 className="col-span-full mb-2 text-center text-3xl text-white md:text-left lg:text-4xl">
-        Experiences
+        {dictionary.title}
       </h2>
       <ul className="col-span-full mb-2 h-fit overflow-hidden rounded-md bg-surface-600 text-base text-secondary-50 md:col-span-3 md:mb-[0px] lg:col-span-4 lg:max-w-[300px]">
         {jobs.map((job) => (
@@ -28,17 +36,17 @@ const Experiences = () => {
       <div className="col-span-full min-h-[300px] text-white md:col-span-5 lg:col-span-8">
         <div className="mb-1 flex items-center justify-between">
           <h3 className="text-balance pr-1 text-lg lg:text-2xl">
-            {jobs[activeJob].role}
+            {jobs[activeJob].role[lang]}
           </h3>
           <span className="text-base text-neutral-300">
-            {jobs[activeJob].date}
+            {jobs[activeJob].date[lang]}
           </span>
         </div>
         <h3 className="mb-1 text-lg text-secondary-300">
           {jobs[activeJob].company}
         </h3>
         <p className="mb-1 text-base text-neutral-500 lg:text-lg">
-          {jobs[activeJob].description}
+          {jobs[activeJob].description[lang]}
         </p>
         <div className="flex flex-wrap gap-[10px]">
           {jobs[activeJob].technologies.map((technology, index) => (

@@ -9,8 +9,13 @@ import Menu from "../icons/Menu";
 import { useEffect, useState } from "react";
 import Close from "../icons/Close";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
+import { getDictionary } from "@/get-dictionary";
 
-const Navbar = () => {
+const Navbar = ({
+  dictionary,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["navbar"];
+}) => {
   const [showMenu, setShowMenu] = useState(false);
   const [transition, setTransition] = useState(false);
   const matches = useBreakpoint("md", "min-width");
@@ -62,10 +67,10 @@ const Navbar = () => {
 
         {[
           ["Home", "#home"],
-          ["About", "#about"],
-          ["Experiences", "#experiences"],
-          ["Projects", "#projects"],
-          ["Contact", "#contact"],
+          [dictionary.about, "#about"],
+          [dictionary.experiences, "#experiences"],
+          [dictionary.projects, "#projects"],
+          [dictionary.contact, "#contact"],
         ].map(([title, url], index) => {
           return (
             <li
@@ -99,7 +104,7 @@ const Navbar = () => {
             className="block rounded-md bg-secondary-600 px-[10px] py-[5px] transition-colors hover:bg-secondary-500 hover:text-white"
             href={process.env.NEXT_PUBLIC_RESUME_LINK}
           >
-            Resume
+            {dictionary.resume}
           </a>
         </li>
       </ul>
