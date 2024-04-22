@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.4",
     "@types/react-responsive": "^8.0.8",
+    "negotiator": "^0.6.3",
     "next": "14.1.0",
     "nodemailer": "^6.9.13",
     "react-dom": "^18",
@@ -17,6 +19,7 @@
     "react-simple-typewriter": "^5.0.1"
   },
   "devDependencies": {
+    "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -1,0 +1,56 @@
+{
+  "navbar": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "experiences": "Experiências",
+    "contact": "Contato",
+    "resume": "Currículo"
+  },
+  "hero": {
+    "presentation": "Olá, eu sou",
+    "typewriterStatic": "Eu sou",
+    "typewriterDynamic": [
+      "Desenvolvedor de Software",
+      "Entusiasta de Tecnologia",
+      "Desenvolvedor Frontend",
+      "Especialista em Transformar Designs em Realidade."
+    ],
+    "description": "Eu sou um desenvolvedor especializado no desenvolvimento de interfaces de usuário, proporcionando ótimas experiências."
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "content": [
+      "Olá, sou Felipe Eduardo, desenvolvedor Frontend. Graduado em Sistemas de Informação pela Escola de Tecnologia - UNICAMP. Com mais de 4 anos de experiência em desenvolvimento, estou atualmente focado em criar interfaces excepcionais para usuários globais.",
+      "Sou apaixonado por ajudar pessoas a resolverem seus problemas e estou constantemente explorando novas tecnologias e metodologias para enfrentar desafios.",
+      "O que verdadeiramente me motiva é perceber que minha experiência está causando um impacto positivo na vida de outras pessoas!"
+    ],
+    "button": "Conheça Meus Projetos"
+  },
+  "experiences": {
+    "title": "Experiências"
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "O que estive construindo",
+    "button": "Veja Mais"
+  },
+  "contact": {
+    "title": "Interessado em trabalhar comigo ?",
+    "description": [
+      "Eu sempre estou procurando por novas oportunidades. Mande um email para",
+      "ou entre em contato em uma rede social."
+    ],
+    "form": {
+      "name": "Nome",
+      "message": "Sua mensagem",
+      "button": "Enviar"
+    }
+  },
+  "footer": {
+    "description": [
+      "Design feito no",
+      "e desenvolvido no Visual Studio Code. Construído com",
+      "e"
+    ]
+  }
+}

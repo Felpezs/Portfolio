@@ -1,0 +1,56 @@
+{
+  "navbar": {
+    "about": "About",
+    "projects": "Projects",
+    "experiences": "Experiences",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "presentation": "Hello, I am",
+    "typewriterStatic": "I am",
+    "typewriterDynamic": [
+      "Software Developer",
+      "Tech Enthusiast",
+      "Frontend Developer",
+      "Turning Designs Into Interactive Experiences"
+    ],
+    "description": "I’m a developer specialized in the development of user interfaces, providing great experiences."
+  },
+  "about": {
+    "title": "About Me",
+    "content": [
+      "Hello, I'm Felipe Eduardo, a Frontend developer. I hold a Bachelor's degree in Information Systems from the School of Technology - UNICAMP. With over 4 years of experience in development, I am currently focused on creating exceptional interfaces for global users.",
+      "I am passionate about assisting individuals in solving their problems and continuously exploring new technologies and methodologies to address challenges.",
+      "What truly motivates me is the realization that my expertise is making a positive impact on others' lives!"
+    ],
+    "button": "Check my Projects"
+  },
+  "experiences": {
+    "title": "Experiences"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "What I've been building",
+    "button": "See more"
+  },
+  "contact": {
+    "title": "Interested in working with me ?",
+    "description": [
+      "I’m always looking forward for new opportunities. Send an email to",
+      "or reach me out in a social media."
+    ],
+    "form": {
+      "name": "Name",
+      "message": "Your message",
+      "button": "Send"
+    }
+  },
+  "footer": {
+    "description": [
+      "Designed in",
+      "and developed in Visual Studio Code. Built with",
+      "and"
+    ]
+  }
+}
