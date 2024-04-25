@@ -53,7 +53,7 @@ const Navbar = ({
   }, [matches]);
 
   return (
-    <nav className="top fixed z-30 flex w-full flex-row gap-1 border-b-[3px] border-secondary-900 bg-surface-800 px-2 py-1 md:px-2 lg:px-3 dark:text-secondary-50">
+    <nav className="top fixed z-30 flex w-full flex-row gap-1 border-b-[3px] border-secondary-600 bg-surface-500 px-2 py-1 text-secondary-50 md:px-2 lg:px-3 dark:border-secondary-900 dark:bg-surface-700 dark:text-secondary-50">
       <span
         className="mr-auto cursor-pointer md:hidden"
         onClick={() => {
@@ -67,7 +67,7 @@ const Navbar = ({
       <ul
         className={`${transition ? "transition-transform duration-700 ease-in-out" : ""} ${
           showMenu ? "translate-x-[0]" : "-translate-x-full"
-        } absolute left-[0px] top-[0px] flex h-[100vh] w-[250px] basis-[484px] flex-col items-center justify-center gap-[20px]  bg-surface-700 text-[18px] md:static md:mr-auto md:flex md:h-auto md:w-auto md:translate-x-[0] md:flex-row md:bg-transparent md:text-base md:transition-none`}
+        } absolute left-[0px] top-[0px] flex h-[100vh] w-[250px] basis-[484px] flex-col items-center justify-center gap-[20px]  bg-surface-500 text-[18px] md:static md:mr-auto md:flex md:h-auto md:w-auto md:translate-x-[0] md:flex-row md:bg-transparent md:text-base md:transition-none`}
       >
         <span
           className="absolute right-1 top-1 cursor-pointer md:hidden"
@@ -112,7 +112,7 @@ const Navbar = ({
           } w-fit text-center md:opacity-100 md:transition-none`}
         >
           <a
-            className="block rounded-md bg-secondary-600 px-[10px] py-[5px] transition-colors hover:bg-secondary-500 hover:text-white"
+            className="block rounded-md bg-secondary-500 px-[10px] py-[5px] transition-colors hover:bg-secondary-600 hover:text-white dark:hover:bg-secondary-300"
             href={process.env.NEXT_PUBLIC_RESUME_LINK}
           >
             {dictionary.resume}

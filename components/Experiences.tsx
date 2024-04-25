@@ -20,7 +20,7 @@ const Experiences = ({
       <h2 className="col-span-full mb-2 text-center text-3xl text-white md:text-left lg:text-4xl">
         {dictionary.title}
       </h2>
-      <ul className="col-span-full mb-2 h-fit overflow-hidden rounded-md bg-surface-600 text-base text-secondary-50 md:col-span-3 md:mb-[0px] lg:col-span-4 lg:max-w-[300px]">
+      <ul className="col-span-full mb-2 h-fit overflow-hidden rounded-md bg-surface-700 text-base text-secondary-50 md:col-span-3 md:mb-[0px] lg:col-span-4 lg:max-w-[300px] dark:bg-surface-500">
         {jobs.map((job) => (
           <li
             key={job.index}

@@ -15,7 +15,7 @@ const Hero = ({
   });
   return (
     <>
-      <h3 className="mb-1 text-neutral-600 md:text-xl lg:text-3xl">
+      <h3 className="mb-1 text-neutral-300 dark:text-neutral-600 md:text-xl lg:text-3xl">
         {dictionary.presentation}
       </h3>
       <h1 className="mb-1 text-balance text-white md:text-4xl lg:text-6xl">
@@ -24,7 +24,7 @@ const Hero = ({
       <h1 className="mb-1 text-balance text-white md:text-4xl lg:text-6xl">
         {dictionary.typewriterStatic + " " + text}
       </h1>
-      <h3 className="mb-1 text-neutral-600 md:text-xl lg:text-3xl">
+      <h3 className="mb-1 text-neutral-300 dark:text-neutral-600 md:text-xl lg:text-3xl">
         {dictionary.description}
       </h3>
       <div className="flex justify-center py-1">

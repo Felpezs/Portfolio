@@ -26,11 +26,13 @@ export default function RootLayout({
   params: { lang: Locale };
 }>) {
   return (
-    <html lang={params.lang}>
+    <html lang={params.lang} className="dark">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.className} bg-surface-800`}>{children}</body>
+      <body className={`${inter.className} bg-surface-500 dark:bg-surface-700`}>
+        {children}
+      </body>
     </html>
   );
 }

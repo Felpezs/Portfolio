@@ -41,21 +41,21 @@ const Form = ({
       className="flex max-w-[600px] flex-grow basis-[400px] flex-col gap-[16px] md:basis-[600px]"
     >
       <input
-        className="rounded-[16px] border-2 border-surface-400 bg-surface-500  px-[16px] py-[12px] text-white  outline-none transition-all placeholder:text-white focus:border-secondary-600"
+        className="rounded-[16px] border-2 border-surface-400 bg-surface-500 px-[16px] py-[12px] text-white outline-none  transition-all placeholder:text-white focus:border-secondary-600 dark:bg-surface-600"
         type="text"
         required
         placeholder={dictionary.form.name}
         name="name"
       />
       <input
-        className="rounded-[16px] border-2 border-surface-400 bg-surface-500  px-[16px] py-[12px] text-white  outline-none transition-all placeholder:text-white focus:border-secondary-600"
+        className="rounded-[16px] border-2 border-surface-400 bg-surface-500  px-[16px] py-[12px] text-white  outline-none transition-all placeholder:text-white focus:border-secondary-600 dark:bg-surface-600"
         type="email"
         required
         placeholder="E-mail"
         name="email"
       />
       <textarea
-        className="flex-grow rounded-[16px] border-2 border-surface-400  bg-surface-500 px-[16px] py-[12px]  text-white outline-none transition-all placeholder:text-white focus:border-secondary-600"
+        className="flex-grow rounded-[16px] border-2 border-surface-400 bg-surface-500 px-[16px] py-[12px] text-white  outline-none transition-all placeholder:text-white focus:border-secondary-600 dark:bg-surface-600"
         required
         placeholder={dictionary.form.message}
         name="body"
