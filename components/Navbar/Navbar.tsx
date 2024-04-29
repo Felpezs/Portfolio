@@ -113,7 +113,7 @@ const Navbar = ({
         >
           <a
             className="block rounded-md bg-secondary-500 px-[10px] py-[5px] transition-colors hover:bg-secondary-600 hover:text-white dark:hover:bg-secondary-300"
-            href={process.env.NEXT_PUBLIC_RESUME_LINK}
+            href={pathName.endsWith("pt-BR") ? process.env.NEXT_PUBLIC_RESUME_LINK_BR:process.env.NEXT_PUBLIC_RESUME_LINK_EN}
           >
             {dictionary.resume}
           </a>
