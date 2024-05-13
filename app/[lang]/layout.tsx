@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Portfolio",
   description:
     "Check my projects, experiences and technologies that I've been working with!",
+  metadataBase: new URL("https://felipeeddev.vercel.app/"),
 };
 
 export default function RootLayout({
